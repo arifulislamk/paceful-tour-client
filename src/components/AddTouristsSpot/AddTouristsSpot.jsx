@@ -7,8 +7,33 @@ const AddTouristsSpot = () => {
 
         event.preventDefault();
         const form = event.target;
-        const name = form.name.value;
-        console.log(name)
+        const spotsname = form.spotsname.value;
+        const image = form.image.value;
+        const country = form.country.value;
+        const location = form.location.value;
+        const discription = form.discription.value;
+        const avaragecost = form.avaragecost.value;
+        const seasonality = form.seasonality.value;
+        const traveltime = form.traveltime.value;
+        const totalvisitorsperyear = form.totalvisitorsperyear.value;
+        console.log(spotsname, image, country, location, discription, avaragecost, seasonality, traveltime, totalvisitorsperyear)
+
+        const spots = {spotsname, image, country, location, discription, avaragecost, seasonality, traveltime, totalvisitorsperyear}
+
+        fetch('http://localhost:5000/spot', {
+            method: "POST",
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify(spots)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            if(data.insertedId){
+                alert('Spot Added Succesful')
+            }
+        })
     }
     return (
         <div>
@@ -22,7 +47,7 @@ const AddTouristsSpot = () => {
                     <label className="label">
                         <span className="label-text text-3xl font-bold">Tourists Spots Name :</span>
                     </label>
-                    <input type="text" name="Spots Name" placeholder="Your Name" className="input input-bordered" required />
+                    <input type="text" name="spotsname" placeholder="Spots Name" className="input input-bordered" required />
                 </div>
                 <div className="form-control">
                     <label className="label">
@@ -34,7 +59,7 @@ const AddTouristsSpot = () => {
                     <label className="label">
                         <span className="label-text">Country Name</span>
                     </label>
-                    <input type="text" name="Country" placeholder="country name" className="input input-bordered" required />
+                    <input type="text" name="country" placeholder="country name" className="input input-bordered" required />
                 </div>
                 <div className="form-control">
                     <label className="label">
