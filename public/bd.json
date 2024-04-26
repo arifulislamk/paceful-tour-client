@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "placeName": "Sundarban",
+        "image": "https://i.ibb.co/QbMCbCS/Untitled-Export-r-Osv-Da4n6.jpg",
+        "area": "10,000 km²"
+    },
+    {
+        "id": 2,
+        "placeName": "Cox's Bazar",
+        "image": "https://i.ibb.co/9by6jXw/Untitled-Export-ivp5d-ON5c.jpg",
+        "area": "6,856 km²"
+    },
+    {
+        "id": 3,
+        "placeName": "Rangamati",
+        "image": "https://i.ibb.co/frQ1YjL/Untitled-Export-6-Dn8-Gtua3.jpg",
+        "area": "6,116 km²"
+    },
+    {
+        "id": 4,
+        "placeName": "Bandarban",
+        "image": "https://i.ibb.co/CzS0yJD/Untitled-Export-u-HXvide7-D.jpg",
+        "area": "4,479 km²"
+    },
+    {
+        "id": 5,
+        "placeName": "Saint Martin’s Island",
+        "image": "https://i.ibb.co/6Rg3Gr4/Untitled-Export-1-MLZDOq8.jpg",
+        "area": "8 km²"
+    }
+]
