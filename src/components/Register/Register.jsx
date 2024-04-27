@@ -56,7 +56,7 @@ const Register = () => {
             .then(res => {
                 console.log(res.user);
                 const user = { email, photo, name }
-                fetch('http://localhost:5000/user', {
+                fetch('https://peaceful-tour-server.vercel.app/user', {
                     method: "POST",
                     headers: {
                         "content-type": "application/json"

@@ -16,6 +16,7 @@ import MyList from './components/MyList/MyList';
 import { HelmetProvider } from 'react-helmet-async';
 import AuthProviders from './AuthProviders/AuthProviders';
 import PraivetRoute from './PraivetRoute/PraivetRoute';
+import SpotDetails from './components/SpotDetails/SpotDetails';
 
 const router = createBrowserRouter([
   {
@@ -38,7 +39,7 @@ const router = createBrowserRouter([
       {
         path: "allTouristsSpot",
         element: <AllTouristsSpot />,
-        loader: () => fetch('http://localhost:5000/spot')
+        loader: () => fetch('https://peaceful-tour-server.vercel.app/spot')
       },
       {
         path: "addTouristsSpot",
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
       {
         path: "myList",
         element: <PraivetRoute><MyList /></PraivetRoute>
+      },
+      {
+        path: "allTouristsSpot/spotDetails/:id",
+        element: <SpotDetails></SpotDetails>,
       }
     ],
   },
