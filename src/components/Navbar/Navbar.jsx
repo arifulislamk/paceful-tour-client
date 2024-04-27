@@ -1,15 +1,24 @@
+import { useContext } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../AuthProviders/AuthProviders";
 
 const Navbar = () => {
-
+    const { users } = useContext(AuthContext)
     const links = <>
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="allTouristsSpot">All Tourists Spot</NavLink></li>
-        <li><NavLink to="addTouristsSpot">Add Tourists Spot</NavLink></li>
-        <li><NavLink to="myList">My List</NavLink></li>
-        <li><NavLink to="login">Login</NavLink></li>
-        <li><NavLink to="register">Register</NavLink></li>
+        {
+            users ? <>
+                <li><NavLink to="addTouristsSpot">Add Tourists Spot</NavLink></li>
+                <li><NavLink to="myList">My List</NavLink></li>
+            </> : <>
+                <li><NavLink to="login">Login</NavLink></li>
+                <li><NavLink to="register">Register</NavLink></li>
+            </>
+        }
+
+
     </>
     return (
         <div className="navbar bg-base-100">
@@ -33,7 +42,12 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Button</a>
+                {
+                    users && <div className="">
+                        <img className="w-1/2 rounded-3xl " src={users.photoURL} alt="" />
+                    </div>
+                }
+
             </div>
 
             <label className="swap swap-rotate">

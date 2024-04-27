@@ -1,31 +1,50 @@
-import { createContext, useState } from "react";
-import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import { createContext, useEffect, useState } from "react";
+import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import app from "../firebase/firebase.config";
 
 
 export const AuthContext = createContext(null)
 const AuthProviders = ({ children }) => {
     const [users, setUsers] = useState(null);
-    const googleProvider = new GoogleAuthProvider() ;
+    const [loading, setLoading] = useState(true);
+
+    const googleProvider = new GoogleAuthProvider();
     const githubProvider = new GithubAuthProvider();
     const auth = getAuth(app);
 
 
     const createUser = (email, password) => {
+        setLoading(true)
         return createUserWithEmailAndPassword(auth, email, password)
     }
 
     const loginUser = (email, password) => {
-        return signInWithEmailAndPassword(auth,email,password)
+        setLoading(true)
+        return signInWithEmailAndPassword(auth, email, password)
     }
 
     const googleSignin = () => {
-        return signInWithPopup(auth, googleProvider) ;
+        setLoading(true)
+        return signInWithPopup(auth, googleProvider);
     }
 
     const githubLogin = () => {
-        return signInWithPopup(auth, githubProvider) ;
+        setLoading(true)
+        return signInWithPopup(auth, githubProvider);
     }
+
+    useEffect(() => {
+        const unSubscribe = onAuthStateChanged(auth, currentUser => {
+            setUsers(currentUser)
+            setLoading(false)
+            console.log("inside useeffect ", currentUser)
+        })
+        return () => {
+            unSubscribe()
+        }
+
+    }, [])
+
     const providerInfo = {
         users,
         createUser,
@@ -33,6 +52,7 @@ const AuthProviders = ({ children }) => {
         googleSignin,
         githubLogin
     }
+
 
     return (
         <AuthContext.Provider value={providerInfo}>
