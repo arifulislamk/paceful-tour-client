@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { LuEyeOff, LuEye } from "react-icons/lu";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProviders/AuthProviders";
 import Swal from 'sweetalert2'
 
@@ -10,6 +10,7 @@ const Login = () => {
 
     const [showpassword, setshowpassword] = useState(false);
     const navigate = useNavigate();
+    const location = useLocation();
 
     const handleLogin = event => {
         event.preventDefault();
@@ -27,7 +28,7 @@ const Login = () => {
                     icon: 'success',
                     confirmButtonText: 'OK'
                 })
-                navigate("/")
+                navigate(location?.state ? location.state : '/')
             })
             .catch(error => {
                 console.log(error)
@@ -43,7 +44,7 @@ const Login = () => {
                     icon: 'success',
                     confirmButtonText: 'OK'
                 })
-                navigate("/")
+                navigate(location?.state ? location.state : '/')
             })
             .catch(error => {
                 console.log(error)
@@ -58,7 +59,7 @@ const Login = () => {
                     icon: 'success',
                     confirmButtonText: 'OK'
                 })
-                navigate("/")
+                navigate(location?.state ? location.state : '/')
                 console.log(res.user)
             })
             .catch(error => {

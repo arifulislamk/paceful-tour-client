@@ -11,7 +11,7 @@ const Home = () => {
                 <title className="">Peaceful Tour | Home</title>
             </Helmet>
             <Carsoul></Carsoul>
-            <TouristsSpots></TouristsSpots>
+            <TouristsSpots ></TouristsSpots>
             <CountriesSection></CountriesSection>
         </div>
     );

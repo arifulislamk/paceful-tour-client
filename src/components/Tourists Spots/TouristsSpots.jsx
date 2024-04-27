@@ -14,14 +14,14 @@ const TouristsSpots = () => {
             })
     }, [])
     return (
-        <div>
+        <div className="mb-10 lg:mb-20">
             <Helmet className="text-sm">
                 <title className="">Peaceful Tour | TouristsSpots</title>
             </Helmet>
-            <h2>Tourists Spots {allspots.length}</h2>
+            <h2 className="mb-5 lg:mb-10 text-center font-extrabold text-2xl lg:text-5xl">Tourists Spots In Southasia</h2>
             <div className=" grid lg:grid-cols-2 gap-4 justify-center items-center">
                 {
-                    allspots.map(spots => <Spots key={spots.id} spots={spots}></Spots>)
+                    allspots.slice(0,6).map(spots => <Spots key={spots.id} spots={spots}></Spots>)
                 }
             </div>
         </div>

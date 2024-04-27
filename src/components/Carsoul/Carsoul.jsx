@@ -1,7 +1,7 @@
 const Carsoul = () => {
     
     return (
-        <div className="carousel rounded-md ">
+        <div className="carousel rounded-md mb-10 lg:mb-20 ">
             <div id="slide1" className="lg:h-[600px] carousel-item relative w-full ">
                 <img className="w-full " src="https://i.ibb.co/GxmdFJd/Untitled-Export-5zw-L8-PVJ.jpg" />
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-20 right-20 top-1/2">

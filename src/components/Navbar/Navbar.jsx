@@ -9,6 +9,7 @@ const Navbar = () => {
     const links = <>
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="allTouristsSpot">All Tourists Spot</NavLink></li>
+        <li><NavLink to="touristsSection">Tourists Section</NavLink></li>
         {
             users ? <>
                 <li><NavLink to="addTouristsSpot">Add Tourists Spot</NavLink></li>
@@ -56,13 +57,13 @@ const Navbar = () => {
                             {
                                 users.photoURL ? <img className="w-[50px] rounded-3xl " src={users.photoURL} alt="" /> : "PhotoNot Availavail this User"
                             }
-                            
+
                         </div>
 
                         {
                             showdropdown && (
                                 <div className="absolute right-4 bg-gray-300 w-52 shadow-md p-5 rounded-md">
-                                    <p className=" border-b-2 border-black mb-4 text-center font-bold">Name : {users.displayName ? users.displayName: "Name Not Found"}</p>
+                                    <p className=" border-b-2 border-black mb-4 text-center font-bold">Name : {users.displayName ? users.displayName : "Name Not Found"}</p>
                                     <button onClick={handleLogOut} className="hover:underline">LogOut</button>
                                 </div>
                             )
