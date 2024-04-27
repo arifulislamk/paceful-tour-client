@@ -1,12 +1,16 @@
 import { useContext, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { LuEyeOff, LuEye } from "react-icons/lu";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProviders/AuthProviders";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Swal from 'sweetalert2'
 
 const Register = () => {
     const { createUser } = useContext(AuthContext);
     const [showpassword, setshowpassword] = useState(false);
+    const navigate = useNavigate();
 
 
     const handleRegister = event => {
@@ -18,6 +22,19 @@ const Register = () => {
         const password = form.password.value;
         console.log(name, email, password, photo)
 
+
+        if (password.length < 6) {
+            toast.error('password must be at least 6 charecter or more charecter!')
+            return;
+        }
+        else if (!/[A-Z]/.test(password)) {
+            toast.error('Password Shounld be uppercase at least one charecter')
+            return;
+        }
+        else if (!/[a-z]/.test(password)) {
+            toast.error('Password Shounld be lowwercase at least one charecter')
+            return;
+        }
 
         createUser(email, password)
             .then(res => {
@@ -33,13 +50,22 @@ const Register = () => {
                     .then(res => res.json())
                     .then(data => {
                         console.log(data)
-                        if(data.insertedId){
+                        if (data.insertedId) {
                             console.log("database added")
+                            toast.success("New User Created and Database Added Succesful")
+                            Swal.fire({
+                                title: 'Registration Success',
+                                text: 'Do you want to continue',
+                                icon: 'success',
+                                confirmButtonText: 'OK'
+                            })
+                            navigate("/")
                         }
                     })
             })
             .catch(error => {
                 console.log(error)
+                toast.error('Email Already Use or There Is an Issue')
             })
 
     }
@@ -67,7 +93,7 @@ const Register = () => {
                     <label className="label">
                         <span className="label-text">PhotoURL</span>
                     </label>
-                    <input type="text" name="photo" placeholder="PhotoURL" className="input input-bordered" required />
+                    <input type="text" name="photo" placeholder="PhotoURL" className="input input-bordered" />
                 </div>
                 <div className="form-control">
                     <label className="label">
@@ -88,6 +114,8 @@ const Register = () => {
                     <p>Already have an account? Please <Link className="text-blue-500" to="/login">Login</Link></p>
                 </div>
             </form>
+
+            <ToastContainer></ToastContainer>
         </div>
     );
 };

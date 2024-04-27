@@ -53,7 +53,10 @@ const Navbar = () => {
                         onMouseLeave={() => setShowdropdown(false)}
                         className="">
                         <div>
-                            <img className="w-1/2 rounded-3xl " src={users.photoURL} alt="" />
+                            {
+                                users.photoURL ? <img className="w-1/2 rounded-3xl " src={users.photoURL} alt="" /> : "PhotoNot Availavail this User"
+                            }
+                            
                         </div>
 
                         {
