@@ -1,13 +1,16 @@
 import { useContext, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { LuEyeOff, LuEye } from "react-icons/lu";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProviders/AuthProviders";
+import Swal from 'sweetalert2'
 
 const Login = () => {
     const { loginUser, googleSignin, githubLogin } = useContext(AuthContext);
 
     const [showpassword, setshowpassword] = useState(false);
+    const navigate = useNavigate();
+
     const handleLogin = event => {
         event.preventDefault();
         const form = event.target;
@@ -18,6 +21,13 @@ const Login = () => {
         loginUser(email, password)
             .then(res => {
                 console.log(res.user)
+                Swal.fire({
+                    title: 'Login Success',
+                    text: 'Do you want to continue',
+                    icon: 'success',
+                    confirmButtonText: 'OK'
+                })
+                navigate("/")
             })
             .catch(error => {
                 console.log(error)
@@ -28,7 +38,12 @@ const Login = () => {
         googleSignin()
             .then(res => {
                 console.log(res.user)
-                alert('login with google succesful')
+                Swal.fire({
+                    title: 'Login With Google',
+                    icon: 'success',
+                    confirmButtonText: 'OK'
+                })
+                navigate("/")
             })
             .catch(error => {
                 console.log(error)
@@ -38,7 +53,12 @@ const Login = () => {
     const handleGithubLogin = () => {
         githubLogin()
             .then(res => {
-                alert("github Succesful add")
+                Swal.fire({
+                    title: 'Login With Github',
+                    icon: 'success',
+                    confirmButtonText: 'OK'
+                })
+                navigate("/")
                 console.log(res.user)
             })
             .catch(error => {
@@ -85,8 +105,6 @@ const Login = () => {
                     </div>
                 </div>
             </form>
-
-
         </div>
     );
 };

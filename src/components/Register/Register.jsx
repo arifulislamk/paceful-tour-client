@@ -23,7 +23,23 @@ const Register = () => {
         console.log(name, email, password, photo)
 
 
-        if (password.length < 6) {
+        if (!name) {
+            toast.error('Please Input Name')
+            return;
+        }
+        else if (!email) {
+            toast.error('Please Input email')
+            return;
+        }
+        else if (!password) {
+            toast.error('Please Input password')
+            return;
+        }
+        else if (!photo) {
+            toast.error('Please Input photo')
+            return;
+        }
+        else if (password.length < 6) {
             toast.error('password must be at least 6 charecter or more charecter!')
             return;
         }
@@ -81,13 +97,13 @@ const Register = () => {
                     <label className="label">
                         <span className="label-text">Name</span>
                     </label>
-                    <input type="text" name="name" placeholder="Your Name" className="input input-bordered" required />
+                    <input type="text" name="name" placeholder="Your Name" className="input input-bordered" />
                 </div>
                 <div className="form-control">
                     <label className="label">
                         <span className="label-text">Email</span>
                     </label>
-                    <input type="email" name="email" placeholder="Your Email" className="input input-bordered" required />
+                    <input type="email" name="email" placeholder="Your Email" className="input input-bordered" />
                 </div>
                 <div className="form-control">
                     <label className="label">
@@ -101,7 +117,7 @@ const Register = () => {
                     </label>
                     <div className="mb-4 relative" >
                         <input placeholder="New Password" className=" w-full py-2 px-4  input input-bordered rounded-lg"
-                            type={showpassword ? 'text' : 'password'} name="password" id="" required />
+                            type={showpassword ? 'text' : 'password'} name="password" id="" />
                         <span className="absolute top-3 right-4 " onClick={() => { setshowpassword(!showpassword) }}>
                             {showpassword ? <LuEyeOff /> : <LuEye />}
                         </span>
