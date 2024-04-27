@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../AuthProviders/AuthProviders";
 
 const Login = () => {
-    const { loginUser, googleSignin } = useContext(AuthContext);
+    const { loginUser, googleSignin, githubLogin } = useContext(AuthContext);
 
     const [showpassword, setshowpassword] = useState(false);
     const handleLogin = event => {
@@ -34,6 +34,18 @@ const Login = () => {
                 console.log(error)
             })
     }
+
+    const handleGithubLogin = () => {
+        githubLogin()
+            .then(res => {
+                alert("github Succesful add")
+                console.log(res.user)
+            })
+            .catch(error => {
+                console.log(error)
+            })
+    }
+
     return (
         <div className="mt-4">
             {/* <ToastContainer /> */}
@@ -69,7 +81,7 @@ const Login = () => {
                 <div className=" flex justify-center items-center">
                     <div className="flex lg:mt-4 w-4/5">
                         <div className="w-1/2"><button onClick={handleGoogleLogin} className=" w-2/5"><img src="https://i.ibb.co/vJN54YQ/Google-2015-logo-svg.png" alt="" /></button></div>
-                        <div className="w-1/2"><button className=" w-2/5"><img src="https://i.ibb.co/nrsgX6d/images.png" alt="" /></button></div>
+                        <div className="w-1/2"><button onClick={handleGithubLogin} className=" w-2/5"><img src="https://i.ibb.co/nrsgX6d/images.png" alt="" /></button></div>
                     </div>
                 </div>
             </form>
