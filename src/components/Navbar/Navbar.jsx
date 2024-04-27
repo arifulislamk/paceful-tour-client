@@ -4,7 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../AuthProviders/AuthProviders";
 
 const Navbar = () => {
-    const { users } = useContext(AuthContext);
+    const { users, logOut } = useContext(AuthContext);
     const [showdropdown, setShowdropdown] = useState(false)
     const links = <>
         <li><NavLink to="/">Home</NavLink></li>
@@ -21,6 +21,10 @@ const Navbar = () => {
 
 
     </>
+
+    const handleLogOut = () => {
+        logOut()
+    }
     return (
         <div className="navbar bg-base-100">
             <Helmet className="text-sm">
@@ -42,7 +46,7 @@ const Navbar = () => {
                     {links}
                 </ul>
             </div>
-            <div className="navbar-end relative">
+            <div className="navbar-end relative z-50">
                 {
                     users && <div
                         onMouseEnter={() => setShowdropdown(true)}
@@ -56,7 +60,7 @@ const Navbar = () => {
                             showdropdown && (
                                 <div className="absolute right-4 bg-gray-300 w-52 shadow-md p-5 rounded-md">
                                     <p className=" border-b-2 border-black mb-4 text-center font-bold">Name : {users.displayName}</p>
-                                    <button className="hover:underline">LogOut</button>
+                                    <button onClick={handleLogOut} className="hover:underline">LogOut</button>
                                 </div>
                             )
                         }
