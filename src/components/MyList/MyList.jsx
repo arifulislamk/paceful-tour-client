@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 
 const MyList = () => {
     return (
-        <div>
+        <div className=" space-y-4 mx-4 lg:mx-12">
             <Helmet className="text-sm">
                 <title className="">Peaceful Tour | MyList</title>
             </Helmet>

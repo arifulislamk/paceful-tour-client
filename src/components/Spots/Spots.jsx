@@ -1,19 +1,25 @@
 import { Link } from "react-router-dom";
 
 const Spots = ({ spots }) => {
-    const { spotsname, image, country, location, discription, avaragecost, seasonality, traveltime, totalvisitorsperyear } = spots;
+    const { spotsname, image, location, avaragecost, seasonality } = spots;
     return (
-        <div className="card bg-base-100 shadow-xl">
-            <figure className="px-10 pt-10">
-                <img src={image} alt="Shoes" className="rounded-xl" />
+        <div className="p-2 bg-base-300 rounded-lg shadow-xl">
+            <figure className="lg:px-10 lg:pt-10">
+                <img src={image} alt="image" className="rounded-xl" />
             </figure>
-            <div className="card-body items-center text-center">
-                <h2 className="card-title">{spotsname}</h2>
-                <p>{country}</p>
-                <p>{location}</p>
-                <div className="card-actions">
-                    <Link to={`spotDetails/${spots._id}`}><button className="btn btn-primary">View Details</button></Link>
+            <div className=" ">
+                <div className="mt-5 lg:px-10 flex justify-between items-center">
+                    <h2 className="card-title ">{spotsname}</h2>
+                    <p className="">{location}</p>
                 </div>
+
+                <div className="mt-5 lg:pl-10 text-xl ">
+                    <h3>Avarage Cost : {avaragecost}</h3>
+                    <h3>Seasonality : {seasonality}</h3>
+                </div>
+            </div>
+            <div className=" text-end pr-10">
+                <Link to={`/spotDetails/${spots._id}`}><button className="btn btn-primary">View Details</button></Link>
             </div>
         </div>
     );

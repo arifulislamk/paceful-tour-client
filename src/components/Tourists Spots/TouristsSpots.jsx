@@ -19,7 +19,7 @@ const TouristsSpots = () => {
                 <title className="">Peaceful Tour | TouristsSpots</title>
             </Helmet>
             <h2>Tourists Spots {allspots.length}</h2>
-            <div className=" grid grid-cols-2 justify-center items-center">
+            <div className=" grid lg:grid-cols-2 gap-4 justify-center items-center">
                 {
                     allspots.map(spots => <Spots key={spots.id} spots={spots}></Spots>)
                 }

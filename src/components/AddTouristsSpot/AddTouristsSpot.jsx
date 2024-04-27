@@ -11,6 +11,8 @@ const AddTouristsSpot = () => {
 
         event.preventDefault();
         const form = event.target;
+        const username = form.username.value ;
+        const useremail = form.useremail.value ;
         const spotsname = form.spotsname.value;
         const image = form.image.value;
         const country = form.country.value;
@@ -22,7 +24,7 @@ const AddTouristsSpot = () => {
         const totalvisitorsperyear = form.totalvisitorsperyear.value;
         console.log(spotsname, image, country, location, discription, avaragecost, seasonality, traveltime, totalvisitorsperyear)
 
-        const spots = { spotsname, image, country, location, discription, avaragecost, seasonality, traveltime, totalvisitorsperyear }
+        const spots = { username, useremail, spotsname, image, country, location, discription, avaragecost, seasonality, traveltime, totalvisitorsperyear }
 
         fetch('https://peaceful-tour-server.vercel.app/spot', {
             method: "POST",

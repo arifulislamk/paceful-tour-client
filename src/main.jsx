@@ -50,9 +50,10 @@ const router = createBrowserRouter([
         element: <PraivetRoute><MyList /></PraivetRoute>
       },
       {
-        path: "allTouristsSpot/spotDetails/:id",
+        path: "/spotDetails/:id",
         element: <SpotDetails></SpotDetails>,
-      }
+        loader: () => fetch('https://peaceful-tour-server.vercel.app/spot')
+      },
     ],
   },
 ]);
