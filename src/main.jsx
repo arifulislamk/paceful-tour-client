@@ -18,6 +18,7 @@ import AuthProviders from './AuthProviders/AuthProviders';
 import PraivetRoute from './PraivetRoute/PraivetRoute';
 import SpotDetails from './components/SpotDetails/SpotDetails';
 import TouristsSpots from './components/Tourists Spots/TouristsSpots';
+import ContactUs from './components/ContactUs/ContactUs';
 
 const router = createBrowserRouter([
   {
@@ -57,7 +58,11 @@ const router = createBrowserRouter([
       },
       {
         path: "touristsSection",
-        element: <TouristsSpots></TouristsSpots> ,
+        element: <TouristsSpots></TouristsSpots>,
+      },
+      {
+        path: "contactUs",
+        element: <ContactUs />
       }
     ],
   },
