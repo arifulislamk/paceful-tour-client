@@ -4,7 +4,8 @@ import { Helmet } from "react-helmet-async";
 
 const AllTouristsSpot = () => {
     const allspots = useLoaderData();
-    console.log(allspots)
+    console.log(allspots) 
+    
     return (
         <div className=" space-y-4 mx-4 lg:mx-12">
             <Helmet className="text-sm">

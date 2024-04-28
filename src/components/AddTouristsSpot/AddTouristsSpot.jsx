@@ -37,7 +37,8 @@ const AddTouristsSpot = () => {
             .then(data => {
                 console.log(data)
                 if (data.insertedId) {
-                    toast.success('Spot Added Succesful')
+                    form.reset()
+                    toast.success('Spot Added Succesful') 
                 }
             })
     }
