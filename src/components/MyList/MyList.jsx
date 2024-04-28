@@ -1,10 +1,11 @@
 import { useContext, useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { AuthContext } from "../../AuthProviders/AuthProviders";
+import Swal from 'sweetalert2'
 
 const MyList = () => {
     const { users } = useContext(AuthContext);
-    const [myList, setMyList] = useState([])
+    const [myList, setMyList] = useState([]);
 
     useEffect(() => {
         fetch(`https://peaceful-tour-server.vercel.app/myList/${users.email}`)
@@ -16,8 +17,38 @@ const MyList = () => {
     }, [])
     // console.log(users)
 
-    const handleDelete = _id => {
-        console.log(_id) 
+    const handleDelete = id => {
+        console.log(id)
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`https://peaceful-tour-server.vercel.app/spot/${id}`, {
+                    method: "DELETE"
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        if (data.deletedCount > 0) {
+                            const remening = myList.filter(spot => spot._id !== id);
+                            setMyList(remening)
+                            Swal.fire({
+                                title: "Deleted!",
+                                text: "Your file has been deleted.",
+                                icon: "success"
+                            });
+                        }
+
+
+                    })
+            }
+        });
     }
     return (
         <div className=" space-y-4 mx-4 lg:mx-12 min-h-screen">
