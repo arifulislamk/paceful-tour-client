@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 
 const Spots = ({ spots }) => {
     const { spotsname, image, location, avaragecost, seasonality, traveltime, totalvisitorsperyear } = spots;
     return (
         <div className="p-2 bg-base-300 rounded-lg shadow-xl">
-            <figure className="lg:px-10 lg:pt-10">
-                <img src={image} alt="image" className="rounded-xl" />
+            <figure className="lg:px-10 lg:pt-10  flex justify-center">
+                <img src={image} alt="image" className="rounded-xl lg:h-[350px] " />
             </figure>
             <div className=" ">
                 <div className="mt-5 lg:px-10 flex justify-between items-center">
@@ -26,5 +27,9 @@ const Spots = ({ spots }) => {
         </div>
     );
 };
-
 export default Spots;
+
+
+Spots.propTypes = {
+    spots: PropTypes.object,
+}
