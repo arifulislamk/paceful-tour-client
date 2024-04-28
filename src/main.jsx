@@ -19,6 +19,8 @@ import PraivetRoute from './PraivetRoute/PraivetRoute';
 import SpotDetails from './components/SpotDetails/SpotDetails';
 import TouristsSpots from './components/Tourists Spots/TouristsSpots';
 import ContactUs from './components/ContactUs/ContactUs';
+import Destination from './components/Destination/Destination';
+import VisitorsReview from './components/VisitorsReview/VisitorsReview';
 
 const router = createBrowserRouter([
   {
@@ -63,6 +65,14 @@ const router = createBrowserRouter([
       {
         path: "contactUs",
         element: <ContactUs />
+      },
+      {
+        path: "destiontion",
+        element: <Destination />
+      },
+      {
+        path: "visitorsReview",
+        element: <VisitorsReview />
       }
     ],
   },

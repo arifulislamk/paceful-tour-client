@@ -5,14 +5,14 @@ import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from "../../AuthProviders/AuthProviders";
 
 const AddTouristsSpot = () => {
-    const {users} =  useContext(AuthContext)
+    const { users } = useContext(AuthContext)
 
     const handleAddSpots = event => {
 
         event.preventDefault();
         const form = event.target;
-        const username = form.username.value ;
-        const useremail = form.useremail.value ;
+        const username = form.username.value;
+        const useremail = form.useremail.value;
         const spotsname = form.spotsname.value;
         const image = form.image.value;
         const country = form.country.value;
@@ -65,7 +65,16 @@ const AddTouristsSpot = () => {
                     <label className="label">
                         <span className="label-text text-xl font-medium">Country Name</span>
                     </label>
-                    <input type="text" name="country" placeholder="country name" className="input input-bordered" required />
+                    <select name="country" className="border border-gray-300 p-3 rounded-lg" id="">
+                        <option defaultValue="Bangladesh" selected disabled className="selected" value="Please Select Country">Please Select Country</option>
+                        <option value="Bangladesh">Bangladesh</option>
+                        <option value="Indonesia">Indonesia</option>
+                        <option value="Malaysia">Malaysia</option>
+                        <option value="Cambodia">Combodia</option>
+                        <option value="Thailand">Thailand</option>
+                        <option value="Veitnam">Veitnam</option>
+                    </select>
+                    {/* <input type="text" name="country" placeholder="country name" className="input input-bordered" required /> */}
                 </div>
                 <div className="form-control">
                     <label className="label">
