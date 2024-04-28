@@ -60,10 +60,6 @@ const router = createBrowserRouter([
         loader: () => fetch('https://peaceful-tour-server.vercel.app/spot')
       },
       {
-        path: "touristsSection",
-        element: <TouristsSpots></TouristsSpots>,
-      },
-      {
         path: "contactUs",
         element: <ContactUs />
       },

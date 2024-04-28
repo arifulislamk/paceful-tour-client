@@ -19,7 +19,7 @@ const TouristsSpots = () => {
                 <title className="">Peaceful Tour | TouristsSpots</title>
             </Helmet>
             <h2 className="mb-5 lg:mb-10 text-center font-extrabold text-2xl lg:text-5xl">Tourists Spots In Southasia</h2>
-            <div className=" grid lg:grid-cols-2 gap-4 justify-center items-center">
+            <div className=" grid lg:grid-cols-3 gap-4 justify-center items-center">
                 {
                     allspots.slice(0,6).map(spots => <Spots key={spots.id} spots={spots}></Spots>)
                 }

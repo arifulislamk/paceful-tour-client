@@ -1,6 +1,6 @@
 const Destination = () => {
     return (
-        <div className="lg:mt-20 lg:mb-10">
+        <div className="lg:mt-20 bg-base-300 lg:p-10 rounded-lg lg:mb-10">
             <h2 className=" text-4xl font-medium mb-4 text-center lg:mb-8">Destination or Routes</h2>
             <div className="mb-5 flex justify-center items-center ">
                 <ul className="timeline timeline-vertical lg:timeline-horizontal  ">

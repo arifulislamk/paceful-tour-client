@@ -18,7 +18,7 @@ const Footer = () => {
                     <a className="link link-hover">About us</a>
                     <Link to="contactUs"><a className="link link-hover">Contact Us</a></Link>
 
-                    
+                    <h2 className=" text-xl mt-10">Social link here : </h2>
                     <div className=" mt-5 flex gap-5">
                         <a href="http://facebook.com"><FaFacebook className="w-10 h-10" /></a>
                         <a href="http://instagram.com"><FaInstagram className="w-10 h-10" /></a>

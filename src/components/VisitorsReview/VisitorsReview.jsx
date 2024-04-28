@@ -1,9 +1,9 @@
 const VisitorsReview = () => {
     return (
-        <div className="text-center rounded-lg mb-5 lg:mb-14 lg:py-10 mt-5 lg:mt-10">
-            <h2 className=" text-3xl font-medium mb-4 lg:mb-5"> Review From Visitors </h2>
+        <div className="text-center rounded-lg mb-5 lg:mb-14 lg:py-10 mt-5">
+            <h2 className=" text-3xl font-medium mb-4 lg:mb-14"> Review From Visitors </h2>
             <div className=" grid lg:grid-cols-3 gap-2 lg:gap-5">
-                <div className="container flex flex-col w-full max-w-lg px-3 lg:p-6 mx-auto divide-y rounded-md dark:divide-gray-300 dark:bg-gray-50 dark:text-gray-800">
+                <div className="container  bg-base-200 flex flex-col w-full max-w-lg px-3 lg:p-6 mx-auto divide-y rounded-lg dark:divide-gray-300 dark:bg-gray-50 dark:text-gray-800">
                     <div className="flex justify-between p-4">
                         <div className="flex space-x-4">
                             <div>
@@ -22,14 +22,14 @@ const VisitorsReview = () => {
                         </div>
                     </div>
                     <div className="p-4 space-y-2 text-sm dark:text-gray-600">
-                        <p>It was my first visit to the Cox's Bazaar i was so excited and it was not holidays so i have had the best view of the sea. As all the other points were crowded we choose Laboni Point to spend our time. The sea was calm and we stayed more than 3 hours there. The view of that place will make you spell bound. We had enjoyed sunset from the sea and it was the best part of my journey.
+                        <p>It was my first visit to the Cox s Bazaar i was so excited and it was not holidays so i have had the best view of the sea. As all the other points were crowded we choose Laboni Point to spend our time. The sea was calm and we stayed more than 3 hours there. The view of that place will make you spell bound. We had enjoyed sunset from the sea and it was the best part of my journey.
                             One incident happened there in the beach, me and my sister forgot the location of our chair were we kept our shoes and left that place bare footed. Me with my sister after one hour or two went to that place again and found our shoes at the same place we left! No one touched them or any other thing never went lost if someone left anything. There were many kids in the beach but no one begs rather they sell something to everyone, This was impressive. I loved that place and want to visit their soon with my friend and family.
 
                         </p>
                         <p>Date of experience: April 2017</p>
                     </div>
                 </div>
-                <div className="container flex flex-col w-full max-w-lg px-3 lg:p-6 mx-auto divide-y rounded-md dark:divide-gray-300 dark:bg-gray-50 dark:text-gray-800">
+                <div className="container bg-base-200 flex flex-col w-full max-w-lg px-3 lg:p-6 mx-auto divide-y rounded-lg dark:divide-gray-300 dark:bg-gray-50 dark:text-gray-800">
                     <div className="flex justify-between p-4">
                         <div className="flex space-x-4">
                             <div>
@@ -54,7 +54,7 @@ const VisitorsReview = () => {
                         <p>Date of experience: April 2024</p>
                     </div>
                 </div>
-                <div className="container  flex flex-col w-full max-w-lg px-3 lg:p-6 mx-auto divide-y rounded-md dark:divide-gray-300 dark:bg-gray-50 dark:text-gray-800">
+                <div className="container bg-base-200  flex flex-col w-full max-w-lg px-3 lg:p-6 mx-auto divide-y rounded-lg dark:divide-gray-300 dark:bg-gray-50 dark:text-gray-800">
                     <div className="flex justify-between p-4">
                         <div className="flex space-x-4">
                             <div>
@@ -80,7 +80,7 @@ const VisitorsReview = () => {
                 </div>
             </div>
 
-            <div className=" flex justify-center items-center">
+            <div className="mt-5 bg-base-300 lg:py-20 lg:mt-10 flex justify-center items-center">
                 <div className="flex flex-col max-w-xl px-8 shadow-sm rounded-xl lg:px-12 dark:bg-gray-50 dark:text-gray-800">
                     <div className="flex flex-col items-center w-full">
                         <h2 className="text-3xl font-semibold text-center">Your opinion matters!</h2>
@@ -115,7 +115,7 @@ const VisitorsReview = () => {
                             </div>
                         </div>
                         <div className="flex flex-col w-full">
-                            <textarea rows="3" placeholder="Message..." className="p-4 border border-gray-500 rounded-md resize-none dark:text-gray-800 dark:bg-gray-50"></textarea>
+                            <textarea rows="10" placeholder="Message..." className="p-4 border border-gray-500 rounded-md resize-none dark:text-gray-800 dark:bg-gray-50"></textarea>
                             <button type="button" className="py-4 my-8 font-semibold rounded-md dark:text-gray-50 dark:bg-violet-600">Leave feedback</button>
                         </div>
                     </div>

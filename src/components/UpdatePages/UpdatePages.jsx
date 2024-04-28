@@ -1,8 +1,9 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const UpdatePages = () => {
     const loadedData = useLoaderData();
+    const navigate = useNavigate() ;
     const { _id, spotsname, image, country, location, discription, avaragecost, seasonality, traveltime, totalvisitorsperyear } = loadedData[0];
     console.log(loadedData[0])
 
@@ -33,11 +34,13 @@ const UpdatePages = () => {
             .then(data => {
                 console.log(data);
                 if (data.modifiedCount > 0) {
+                    form.reset() 
                     Swal.fire({
                         title: "Updated Done!",
                         text: "Your Spot Now Updated",
                         icon: "success"
                     });
+                    navigate('/myList')
                 }
             })
     }

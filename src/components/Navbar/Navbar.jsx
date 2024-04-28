@@ -9,7 +9,6 @@ const Navbar = () => {
     const links = <>
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="allTouristsSpot">All Tourists Spot</NavLink></li>
-        <li><NavLink to="touristsSection">Tourists Section</NavLink></li>
         {
             users ? <>
                 <li><NavLink to="addTouristsSpot">Add Tourists Spot</NavLink></li>

@@ -42,7 +42,7 @@ const AllTouristsSpot = () => {
                 </select>
             </div>
 
-            <div className=" grid lg:grid-cols-2 justify-center gap-4 items-center">
+            <div className=" grid lg:grid-cols-3 justify-center gap-4 items-center">
                 {
                     allspots.map(spots => <Spots key={spots._id} spots={spots}></Spots>)
                 }
