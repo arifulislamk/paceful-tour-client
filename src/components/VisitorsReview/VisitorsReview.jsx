@@ -1,6 +1,6 @@
 const VisitorsReview = () => {
     return (
-        <div className="text-center bg-blue-100 rounded-lg mb-5 lg:mb-14 lg:py-10 mt-5 lg:mt-10">
+        <div className="text-center rounded-lg mb-5 lg:mb-14 lg:py-10 mt-5 lg:mt-10">
             <h2 className=" text-3xl font-medium mb-4 lg:mb-5"> Review From Visitors </h2>
             <div className=" grid lg:grid-cols-3 gap-2 lg:gap-5">
                 <div className="container flex flex-col w-full max-w-lg px-3 lg:p-6 mx-auto divide-y rounded-md dark:divide-gray-300 dark:bg-gray-50 dark:text-gray-800">

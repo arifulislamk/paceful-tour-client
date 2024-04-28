@@ -21,6 +21,7 @@ import TouristsSpots from './components/Tourists Spots/TouristsSpots';
 import ContactUs from './components/ContactUs/ContactUs';
 import Destination from './components/Destination/Destination';
 import VisitorsReview from './components/VisitorsReview/VisitorsReview';
+import UpdatePages from './components/UpdatePages/UpdatePages';
 
 const router = createBrowserRouter([
   {
@@ -73,6 +74,10 @@ const router = createBrowserRouter([
       {
         path: "visitorsReview",
         element: <VisitorsReview />
+      },
+      {
+        path: "updatePages",
+        element: <UpdatePages />
       }
     ],
   },

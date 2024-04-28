@@ -2,13 +2,14 @@ import { useContext, useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { AuthContext } from "../../AuthProviders/AuthProviders";
 import Swal from 'sweetalert2'
+import { Link } from "react-router-dom";
 
 const MyList = () => {
     const { users } = useContext(AuthContext);
     const [myList, setMyList] = useState([]);
 
     useEffect(() => {
-        fetch(`https://peaceful-tour-server.vercel.app/myList/${users.email}`)
+        fetch(`https://peaceful-tour-server.vercel.app/myList/${users?.email}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data)
@@ -50,6 +51,7 @@ const MyList = () => {
             }
         });
     }
+
     return (
         <div className=" space-y-4 mx-4 lg:mx-12 min-h-screen">
             <Helmet className="text-sm">
@@ -80,10 +82,8 @@ const MyList = () => {
                                     <td>{spot.location}</td>
                                     <td>{spot.traveltime}</td>
                                     <td>{spot.avaragecost}</td>
-                                    <td>Update</td>
-                                    <button onClick={() => handleDelete(spot._id)} className="btn">
-                                        <td>X</td>
-                                    </button>
+                                    <td><Link to="/updatePages"><button className="btn">Update</button></Link></td>
+                                    <td><button onClick={() => handleDelete(spot._id)} className="btn">X</button></td>
                                 </tr>)
                             }
                         </tbody>

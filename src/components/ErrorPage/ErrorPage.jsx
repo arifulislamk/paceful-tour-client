@@ -1,8 +1,14 @@
+import { Link } from "react-router-dom";
+
 const ErrorPage = () => {
     return (
-        <div>
-            <h1>404 Ooops!</h1>
-            <img src="https://i.ibb.co/09dkC21/ss.png" alt="" />
+        <div className="text-center lg:mt-10">
+            <div className="flex flex-col-reverse lg:flex-row lg:gap-28 px-8">
+                <Link to="/"><button className=" lg:text-2xl bg-orange-300 p-3  rounded-lg">Please Go back</button></Link>
+                <h1 className="text-2xl mb-4  lg:text-5xl font-bold">Ooops! You are may be wrong!</h1>
+            </div>
+
+            <div className=" flex justify-center"> <img src="https://i.ibb.co/Q9FZqPn/1-De-Bkx8vjbump-CO-Zk-PE9-Cw.png" alt="" /></div>
         </div>
     );
 };
