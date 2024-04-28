@@ -82,7 +82,7 @@ const MyList = () => {
                                     <td>{spot.location}</td>
                                     <td>{spot.traveltime}</td>
                                     <td>{spot.avaragecost}</td>
-                                    <td><Link to="/updatePages"><button className="btn">Update</button></Link></td>
+                                    <td><Link to={`/updatePages/${spot._id}`}><button className="btn">Update</button></Link></td>
                                     <td><button onClick={() => handleDelete(spot._id)} className="btn">X</button></td>
                                 </tr>)
                             }

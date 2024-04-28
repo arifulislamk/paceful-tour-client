@@ -11,16 +11,17 @@ const Navbar = () => {
         <li><NavLink to="allTouristsSpot">All Tourists Spot</NavLink></li>
         <li><NavLink to="touristsSection">Tourists Section</NavLink></li>
         {
-            users && <>
+            users ? <>
                 <li><NavLink to="addTouristsSpot">Add Tourists Spot</NavLink></li>
                 <li><NavLink to="myList">My List</NavLink></li>
+            </> : <>
+                <li><NavLink to="login">Login</NavLink></li>
+                <li><NavLink to="register">Register</NavLink></li>
             </>
         }
         <li><NavLink to="destiontion">Destination Details</NavLink></li>
         <li><NavLink to="visitorsReview">Review</NavLink></li>
         <li><NavLink to="contactUs">Contact Us</NavLink></li>
-        <li><NavLink to="login">Login</NavLink></li>
-        <li><NavLink to="register">Register</NavLink></li>
 
 
     </>

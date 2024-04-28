@@ -76,8 +76,9 @@ const router = createBrowserRouter([
         element: <VisitorsReview />
       },
       {
-        path: "updatePages",
-        element: <UpdatePages />
+        path: "updatePages/:id",
+        element: <UpdatePages />,
+        loader: ({params}) => fetch(`https://peaceful-tour-server.vercel.app/update/${params.id}`)
       }
     ],
   },
