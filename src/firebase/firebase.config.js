@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDD3wCN4iC-gIvAWZUwTXEjtXZ_EtcFG7s",
-  authDomain: "peaceful-tour.firebaseapp.com",
-  projectId: "peaceful-tour",
-  storageBucket: "peaceful-tour.appspot.com",
-  messagingSenderId: "958570581678",
-  appId: "1:958570581678:web:d5fa1c7af60cccaf7d273f"
+  apiKey:import.meta.env.VITE_APIKEY ,
+  authDomain:import.meta.env.VITE_AUTHDOMAIN ,
+  projectId:import.meta.env.VITE_PROJECTID ,
+  storageBucket:import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId:import.meta.env.VITE_MESSAGINGSENDERID,
+  appId:import.meta.env.VITE_APPID ,
 };
 
 // Initialize Firebase
