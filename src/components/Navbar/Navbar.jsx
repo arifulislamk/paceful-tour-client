@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../AuthProviders/AuthProviders";
+import { Tooltip } from 'react-tooltip'
 
 const Navbar = () => {
     const { users, logOut } = useContext(AuthContext);
@@ -42,7 +43,9 @@ const Navbar = () => {
                         {links}
                     </ul>
                 </div>
-                <Link to="/"><a className="btn btn-ghost font-bold text-xl">Peaceful Tour</a></Link>
+                <Link to="/"><a data-tooltip-id="my-tooltip"
+                    data-tooltip-content="Website Name"
+                    data-tooltip-place="top" className="btn btn-ghost font-bold text-xl">Peaceful Tour</a></Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -72,7 +75,10 @@ const Navbar = () => {
                         }
                     </div>
                 }
-                <label className="swap swap-rotate">
+
+                <label data-tooltip-id="my-tooltip"
+                    data-tooltip-content="Hello, I am theme Changer"
+                    data-tooltip-place="top" className="lg:ml-8 swap swap-rotate">
 
                     {/* this hidden checkbox controls the state */}
                     <input type="checkbox" className="theme-controller" value="synthwave" />
@@ -82,7 +88,7 @@ const Navbar = () => {
 
                     {/* moon icon */}
                     <svg className="swap-on fill-current w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" /></svg>
-
+                    <Tooltip id="my-tooltip" />
                 </label>
 
             </div>

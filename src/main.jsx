@@ -17,11 +17,11 @@ import { HelmetProvider } from 'react-helmet-async';
 import AuthProviders from './AuthProviders/AuthProviders';
 import PraivetRoute from './PraivetRoute/PraivetRoute';
 import SpotDetails from './components/SpotDetails/SpotDetails';
-import TouristsSpots from './components/Tourists Spots/TouristsSpots';
 import ContactUs from './components/ContactUs/ContactUs';
 import Destination from './components/Destination/Destination';
 import VisitorsReview from './components/VisitorsReview/VisitorsReview';
 import UpdatePages from './components/UpdatePages/UpdatePages';
+import EachCountry from './components/EachCountry/EachCountry';
 
 const router = createBrowserRouter([
   {
@@ -75,6 +75,11 @@ const router = createBrowserRouter([
         path: "updatePages/:id",
         element: <UpdatePages />,
         loader: ({params}) => fetch(`https://peaceful-tour-server.vercel.app/update/${params.id}`)
+      },
+      {
+        path: "eachCountry/:country",
+        element: <EachCountry /> ,
+        loader: ({params})=> fetch(`https://peaceful-tour-server.vercel.app/country/${params.country}`)
       }
     ],
   },

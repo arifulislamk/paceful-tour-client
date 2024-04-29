@@ -67,7 +67,7 @@ const MyList = () => {
                                 <th></th>
                                 <th>Spots Name</th>
                                 <th>Location</th>
-                                <th>Travel Time</th>
+                                <th>Country</th>
                                 <th>Average Cost</th>
                                 <th>Update</th>
                                 <th>Delete</th>
@@ -80,7 +80,7 @@ const MyList = () => {
                                     <th></th>
                                     <td>{spot.spotsname}</td>
                                     <td>{spot.location}</td>
-                                    <td>{spot.traveltime}</td>
+                                    <td>{spot.country}</td>
                                     <td>{spot.avaragecost}</td>
                                     <td><Link to={`/updatePages/${spot._id}`}><button className="btn">Update</button></Link></td>
                                     <td><button onClick={() => handleDelete(spot._id)} className="btn">X</button></td>
