@@ -1,11 +1,24 @@
-import { useLoaderData, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const UpdatePages = () => {
-    const loadedData = useLoaderData();
-    const navigate = useNavigate() ;
-    const { _id, spotsname, image, country, location, discription, avaragecost, seasonality, traveltime, totalvisitorsperyear } = loadedData[0];
-    console.log(loadedData[0])
+    // const loadedData = useLoaderData();
+    const [loading, setLoading] = useState(true)
+    const navigate = useNavigate();
+    const [loadedData, setLoadedData] = useState([])
+    const { id } = useParams();
+    useEffect(() => {
+        fetch(`https://peaceful-tour-server.vercel.app/update/${id}`)
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                setLoadedData(data)
+                setLoading(false)
+            })
+    }, [])
+    const { _id, spotsname, image, country, location, discription, avaragecost, seasonality, traveltime, totalvisitorsperyear } = loadedData;
+    console.log(loadedData)
 
     const handleUpdate = event => {
         event.preventDefault();
@@ -34,7 +47,7 @@ const UpdatePages = () => {
             .then(data => {
                 console.log(data);
                 if (data.modifiedCount > 0) {
-                    form.reset() 
+                    form.reset()
                     Swal.fire({
                         title: "Updated Done!",
                         text: "Your Spot Now Updated",
@@ -46,8 +59,9 @@ const UpdatePages = () => {
     }
     return (
         <div>
-            <form onSubmit={handleUpdate} className=" card-body space-y-2 mb-6 border rounded-lg border-gray-400 lg:w-1/2 mx-auto">
+            <form onSubmit={handleUpdate} className=" font-algeria card-body space-y-2 mb-6 border rounded-lg border-gray-400 lg:w-1/2 mx-auto">
                 <h2 className=" text-2xl lg:text-5xl text-center font-extrabold">Update Your Spot</h2>
+                {loading && <div className=" mt-6 flex justify-center"><span className="loading text-yellow-400 loading-spinner loading-lg"></span></div>}
                 <div className="form-control">
                     <label className="label">
                         <span className="label-text text-xl font-medium">Tourists Spots Name :</span>

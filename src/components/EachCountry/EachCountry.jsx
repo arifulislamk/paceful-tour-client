@@ -1,17 +1,32 @@
-import { useLoaderData } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Spots from "../Spots/Spots";
+import { useEffect, useState } from "react";
 
 const EachCountry = () => {
-    const loadedData = useLoaderData()
-    console.log('data', loadedData) 
+    const [loading, setLoading] = useState(true)
+    // const loadedData = useLoaderData();
+    // console.log('data', loadedData)
+    const [loadedData, setLoadedData] = useState([])
+    const { country } = useParams();
+    
+    useEffect(() => {
+        fetch(`https://peaceful-tour-server.vercel.app/country/${country}`)
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                setLoadedData(data)
+                setLoading(false)
+            })
+    }, [])
 
-    const countryone = []
-    loadedData.map( country => countryone.push(country.country) ) 
-    const filterCountry = countryone.find( country => country !== 'America') 
+    const countryone = [];
+    loadedData.map(country => countryone.push(country.country))
+    const filterCountry = countryone.find(country => country !== 'America')
     console.log(filterCountry)
 
     return (
         <div className="bg-base-200 lg:p-10 ">
+            {loading && <div className=" mt-6 flex justify-center"><span className="loading text-yellow-400 loading-spinner loading-lg"></span></div>}
             <h2 className="lg:mb-10 text-3xl font-medium text-center">{filterCountry} Tourists Spots</h2>
             <div className=" grid lg:grid-cols-3 gap-4">
                 {

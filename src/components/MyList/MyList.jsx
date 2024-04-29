@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 const MyList = () => {
     const { users } = useContext(AuthContext);
     const [myList, setMyList] = useState([]);
+    const [loading, setlLoading] = useState(true)
 
     useEffect(() => {
         fetch(`https://peaceful-tour-server.vercel.app/myList/${users?.email}`)
@@ -14,6 +15,7 @@ const MyList = () => {
             .then(data => {
                 console.log(data)
                 setMyList(data)
+                setlLoading(false)
             })
     }, [])
     // console.log(users)
@@ -73,6 +75,7 @@ const MyList = () => {
                                 <th>Delete</th>
                             </tr>
                         </thead>
+                        {loading && <div className=" mt-6 flex justify-center"><span className="loading text-yellow-400 loading-spinner loading-lg"></span></div>}
                         <tbody className=" text-xl">
                             {/* row 1 */}
                             {

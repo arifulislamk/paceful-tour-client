@@ -6,7 +6,7 @@ import { Tooltip } from 'react-tooltip'
 
 const Navbar = () => {
     const { users, logOut } = useContext(AuthContext);
-    const [showdropdown, setShowdropdown] = useState(false)
+    const [showdropdown, setShowdropdown] = useState(false) 
     const links = <>
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="allTouristsSpot">All Tourists Spot</NavLink></li>
@@ -60,7 +60,7 @@ const Navbar = () => {
                         className="">
                         <div>
                             {
-                                users.photoURL ? <img className="w-[50px] rounded-3xl " src={users.photoURL} alt="" /> : "PhotoNot Availavail this User"
+                                users?.photoURL ? <img className="w-[50px] rounded-3xl " src={users.photoURL} alt="" /> : "PhotoNot Availavail this User"
                             }
 
                         </div>

@@ -4,6 +4,8 @@ import { LuEyeOff, LuEye } from "react-icons/lu";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProviders/AuthProviders";
 import Swal from 'sweetalert2'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
     const { loginUser, googleSignin, githubLogin } = useContext(AuthContext);
@@ -32,6 +34,7 @@ const Login = () => {
             })
             .catch(error => {
                 console.log(error)
+                toast.error('Please Type Corrrct Information')
             })
     }
 
@@ -48,6 +51,7 @@ const Login = () => {
             })
             .catch(error => {
                 console.log(error)
+                toast.error('Ooops! issues. Please try again')
             })
     }
 
@@ -101,11 +105,12 @@ const Login = () => {
                 </div>
                 <div className=" flex justify-center items-center">
                     <div className="flex lg:mt-4 w-4/5">
-                        <div className="w-1/2"><button onClick={handleGoogleLogin} className=" w-2/5"><img src="https://i.ibb.co/vJN54YQ/Google-2015-logo-svg.png" alt="" /></button></div>
-                        <div className="w-1/2"><button onClick={handleGithubLogin} className=" w-2/5"><img src="https://i.ibb.co/nrsgX6d/images.png" alt="" /></button></div>
+                        <div className="w-1/2"><button onClick={handleGoogleLogin} className=" w-2/5"><img src="https://i.ibb.co/vJN54YQ/Google-2015-logo-svg.png" alt="google image" /></button></div>
+                        <div className="w-1/2"><button onClick={handleGithubLogin} className=" w-2/5"><img src="https://i.ibb.co/nrsgX6d/images.png" alt="githubimage" /></button></div>
                     </div>
                 </div>
             </form>
+            <ToastContainer />
         </div>
     );
 };

@@ -1,11 +1,21 @@
-import { useLoaderData } from "react-router-dom";
 import Spots from "../Spots/Spots";
 import { Helmet } from "react-helmet-async";
 import { useEffect, useState } from "react";
 
 const AllTouristsSpot = () => {
-    const loadedAllSpots = useLoaderData();
-    const [allspots, setAllspots] = useState(loadedAllSpots);
+    const [loading, setlLoading] = useState(true);
+    // const loadedAllSpots = useLoaderData();
+    const [allspots, setAllspots] = useState([]);
+    useEffect(() => {
+        fetch('https://peaceful-tour-server.vercel.app/spot')
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                setAllspots(data)
+                setlLoading(false)
+            })
+    }, [])
+
 
     const [filter, setFilter] = useState('')
     // console.log(allspots)
@@ -16,6 +26,7 @@ const AllTouristsSpot = () => {
         if (filter === 'avarageCostinglow') {
             const sort = [...allspots].sort((a, b) => a.avaragecost - b.avaragecost);
             setAllspots(sort)
+            setlLoading(false)
             // console.log(sort)
         }
         if (filter === 'avarageCostinghigh') {
@@ -41,6 +52,7 @@ const AllTouristsSpot = () => {
                     <option value="avarageCostinghigh">High to Low</option>
                 </select>
             </div>
+            {loading && <div className=" mt-6 flex justify-center"><span className="loading text-yellow-400 loading-spinner loading-lg"></span></div>}
 
             <div className=" grid lg:grid-cols-3 justify-center gap-4 items-center">
                 {
