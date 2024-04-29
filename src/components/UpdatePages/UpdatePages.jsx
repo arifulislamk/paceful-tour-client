@@ -73,7 +73,7 @@ const UpdatePages = () => {
                     </label>
                     <input type="text" defaultValue={location} name="location" placeholder="location" className="input input-bordered" required />
                 </div>
-                <div className="flex justify-around gap-5">
+                <div className="flex flex-col lg:flex-row justify-around gap-5">
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text text-xl ">Average Cost :</span>
@@ -87,7 +87,7 @@ const UpdatePages = () => {
                         <input type="text" defaultValue={seasonality} name="seasonality" placeholder="seasonality - like summer, winter" className="input input-bordered" required />
                     </div>
                 </div>
-                <div className="flex justify-around">
+                <div className="flex flex-col lg:flex-row justify-around">
                     <div className="form-control ">
                         <label className="label">
                             <span className="label-text text-xl ">Travel Time :</span>

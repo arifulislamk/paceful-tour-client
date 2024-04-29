@@ -1,7 +1,7 @@
 const VisitorsReview = () => {
     return (
-        <div className="text-center rounded-lg mb-5 lg:mb-14 lg:py-10 mt-5">
-            <h2 className=" text-3xl font-medium mb-4 lg:mb-14"> Review From Visitors </h2>
+        <div className="text-center font-algeria rounded-lg mb-5 lg:mb-10 mt-5">
+            <h2 className="mb-5 lg:mb-20 text-center font-roboto font-extrabold text-2xl lg:text-5xl"> Review From Visitors </h2>
             <div className=" grid lg:grid-cols-3 gap-2 lg:gap-5">
                 <div className="container  bg-base-200 flex flex-col w-full max-w-lg px-3 lg:p-6 mx-auto divide-y rounded-lg dark:divide-gray-300 dark:bg-gray-50 dark:text-gray-800">
                     <div className="flex justify-between p-4">
@@ -10,8 +10,8 @@ const VisitorsReview = () => {
                                 <img src="https://i.ibb.co/H47qH3B/joseph-gonzalez-i-Fg-Rcq-Hznqg-unsplash-1.jpg" alt="" className="object-cover w-12 h-12 rounded-full dark:bg-gray-500" />
                             </div>
                             <div>
-                                <h4 className="font-bold">Ariful Khan</h4>
-                                <span className="text-xs dark:text-gray-600">7 years ago</span>
+                                <h4 className=" text-2xl font-medium font-algeria">Ariful Khan</h4>
+                                <span className="text-xl dark:text-gray-600">7 years ago</span>
                             </div>
                         </div>
                         <div className="flex items-center space-x-2 dark:text-yellow-700">
@@ -36,8 +36,8 @@ const VisitorsReview = () => {
                                 <img src="https://i.ibb.co/58v9msz/michael-dam-m-EZ3-Po-FGs-k-unsplash-1.jpg" alt="" className="object-cover w-12 h-12 rounded-full dark:bg-gray-500" />
                             </div>
                             <div>
-                                <h4 className="font-bold">Sunny Henri</h4>
-                                <span className="text-xs dark:text-gray-600">2 days ago</span>
+                                <h4 className="text-2xl font-medium font-algeria">Sunny Henri</h4>
+                                <span className="text-xl dark:text-gray-600">2 days ago</span>
                             </div>
                         </div>
                         <div className="flex items-center space-x-2 dark:text-yellow-700">
@@ -61,8 +61,8 @@ const VisitorsReview = () => {
                                 <img src="https://i.ibb.co/98tNKtQ/jake-nackos-IF9-TK5-Uy-KI-unsplash-1.jpg" alt="" className="object-cover w-12 h-12 rounded-full dark:bg-gray-500" />
                             </div>
                             <div>
-                                <h4 className="font-bold">Miyal Jeny</h4>
-                                <span className="text-xs dark:text-gray-600">1 years ago</span>
+                                <h4 className="text-2xl font-medium font-algeria">Miyal Jeny</h4>
+                                <span className="text-xl dark:text-gray-600">1 years ago</span>
                             </div>
                         </div>
                         <div className="flex items-center space-x-2 dark:text-yellow-700">
@@ -80,7 +80,7 @@ const VisitorsReview = () => {
                 </div>
             </div>
 
-            <div className="mt-5 bg-base-300 lg:py-20 lg:mt-10 flex justify-center items-center">
+            <div className="mt-5 bg-base-300 rounded-lg lg:py-20 lg:mt-10 flex justify-center items-center">
                 <div className="flex flex-col max-w-xl px-8 shadow-sm rounded-xl lg:px-12 dark:bg-gray-50 dark:text-gray-800">
                     <div className="flex flex-col items-center w-full">
                         <h2 className="text-3xl font-semibold text-center">Your opinion matters!</h2>

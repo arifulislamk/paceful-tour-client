@@ -53,18 +53,18 @@ const MyList = () => {
     }
 
     return (
-        <div className=" space-y-4 mx-4 lg:mx-12 min-h-screen">
+        <div className=" mt-5 font-algeria space-y-4 mx-4 lg:mx-12 min-h-screen">
             <Helmet className="text-sm">
                 <title className="">Peaceful Tour | MyList</title>
             </Helmet>
-            <h2 className="text-xl lg:text-3xl font-medium text-center">My Added All Spots </h2>
+            <h2 className="text-2xl mb-5 lg:mb-10 lg:text-5xl font-extrabold text-center">My Added Spots </h2>
             <div>
                 <div className="overflow-x-auto">
                     <table className="table">
                         {/* head */}
-                        <thead className="">
+                        <thead className=" font-medium text-2xl">
                             <tr>
-                                <th></th>
+                                <th>No.</th>
                                 <th>Spots Name</th>
                                 <th>Location</th>
                                 <th>Country</th>
@@ -73,11 +73,11 @@ const MyList = () => {
                                 <th>Delete</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody className=" text-xl">
                             {/* row 1 */}
                             {
-                                myList.map(spot => <tr key={spot._id}>
-                                    <th></th>
+                                myList.map((spot,inx) => <tr key={spot._id}>
+                                    <th>{inx+1}</th>
                                     <td>{spot.spotsname}</td>
                                     <td>{spot.location}</td>
                                     <td>{spot.country}</td>

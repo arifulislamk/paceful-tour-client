@@ -86,7 +86,7 @@ const Register = () => {
 
     }
     return (
-        <div className="mt-4">
+        <div className="mt-4 font-algeria">
             {/* <ToastContainer /> */}
             <Helmet className="text-sm">
                 <title className="">Peaceful Tour | Register</title>
@@ -95,25 +95,25 @@ const Register = () => {
             <form onSubmit={handleRegister} className="card-body mb-6 border rounded-lg border-gray-400 lg:w-1/2 mx-auto">
                 <div className="form-control">
                     <label className="label">
-                        <span className="label-text">Name</span>
+                        <span className="label-text text-2xl font-medium">Name</span>
                     </label>
                     <input type="text" name="name" placeholder="Your Name" className="input input-bordered" />
                 </div>
                 <div className="form-control">
                     <label className="label">
-                        <span className="label-text">Email</span>
+                        <span className="label-text text-2xl font-medium">Email</span>
                     </label>
                     <input type="email" name="email" placeholder="Your Email" className="input input-bordered" />
                 </div>
                 <div className="form-control">
                     <label className="label">
-                        <span className="label-text">PhotoURL</span>
+                        <span className="label-text text-2xl font-medium">PhotoURL</span>
                     </label>
                     <input type="text" name="photo" placeholder="PhotoURL" className="input input-bordered" />
                 </div>
                 <div className="form-control">
                     <label className="label">
-                        <span className="label-text">Password</span>
+                        <span className="label-text text-lime-200 font-medium">Password</span>
                     </label>
                     <div className="mb-4 relative" >
                         <input placeholder="New Password" className=" w-full py-2 px-4  input input-bordered rounded-lg"
@@ -124,10 +124,10 @@ const Register = () => {
                     </div>
                 </div>
                 <div className="form-control mt-6">
-                    <button className="btn btn-primary">Register</button>
+                    <button className="btn btn-primary text-2xl font-medium">Register</button>
                 </div>
                 <div>
-                    <p>Already have an account? Please <Link className="text-blue-500" to="/login">Login</Link></p>
+                    <p className=" text-xl">Already have an account? Please <Link className="text-blue-500 font-medium" to="/login">Login</Link></p>
                 </div>
             </form>
 

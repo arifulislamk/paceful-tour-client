@@ -48,7 +48,7 @@ const AddTouristsSpot = () => {
                 <title className="">Peaceful Tour | AddTouristsSpot</title>
             </Helmet>
 
-            <form onSubmit={handleAddSpots} className=" card-body space-y-4 mb-6 border rounded-lg border-gray-400 lg:w-1/2 mx-auto">
+            <form onSubmit={handleAddSpots} className="font-algeria card-body space-y-4 mb-6 border rounded-lg border-gray-400 lg:w-1/2 mx-auto">
                 <h2 className=" text-2xl lg:text-5xl text-center font-extrabold">Add Your Spot</h2>
                 <div className="form-control">
                     <label className="label">
@@ -83,7 +83,7 @@ const AddTouristsSpot = () => {
                     </label>
                     <input type="text" name="location" placeholder="location" className="input input-bordered" required />
                 </div>
-                <div className="flex justify-around gap-5">
+                <div className="flex flex-col lg:flex-row justify-around gap-5">
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text text-xl ">Average Cost :</span>
@@ -97,7 +97,7 @@ const AddTouristsSpot = () => {
                         <input type="text" name="seasonality" placeholder="seasonality - like summer, winter" className="input input-bordered" required />
                     </div>
                 </div>
-                <div className="flex justify-around">
+                <div className="flex flex-col lg:flex-row justify-around">
                     <div className="form-control ">
                         <label className="label">
                             <span className="label-text text-xl ">Travel Time :</span>

@@ -33,7 +33,7 @@ const AllTouristsSpot = () => {
             <Helmet className="text-sm">
                 <title className="">Peaceful Tour | AllTouristsSpot</title>
             </Helmet>
-            <h2 className=" text-2xl text-center lg:text-5xl font-bold">SouthAsia All Tourists Spots</h2>
+            <h2 className=" text-2xl text-center lg:text-5xl font-roboto font-bold">SouthAsia All Tourists Spots</h2>
             <div className=" flex justify-center">
                 <select onChange={handleSorting} name="country" className="border border-gray-300 p-3 rounded-lg" id="">
                     <option defaultValue="" selected disabled className="selected" value="Please Select Country">Avarage Cost Sorting</option>

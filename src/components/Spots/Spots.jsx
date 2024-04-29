@@ -10,15 +10,15 @@ const Spots = ({ spots }) => {
             </figure>
             <div className=" ">
                 <div className="mt-5 lg:px-10 flex justify-between items-center">
-                    <h2 className="card-title ">{spotsname}</h2>
-                    <p className="">{location}</p>
+                    <h2 className="card-title text-2xl font-medium font-algeria ">{spotsname}</h2>
+                    <p className=" font-medium font-algeria ">{location}</p>
                 </div>
 
-                <div className="mt-5 lg:pl-10 text-xl ">
-                    <h3>Avarage Cost : {avaragecost}</h3>
-                    <h3>Seasonality : {seasonality}</h3>
-                    <h3>Visitor per/year : {totalvisitorsperyear}</h3>
-                    <h3>traveltime : {traveltime}</h3>
+                <div className="mt-5 text-xl lg:pl-10 font-algeria ">
+                    <h3 ><span className=" font-medium mr-5">Avarage Cost :</span>  {avaragecost}</h3>
+                    <h3 ><span className="font-medium mr-5">Seasonality :</span> {seasonality}</h3>
+                    <h3><span className=" font-medium mr-5">Visitor per/year :</span> {totalvisitorsperyear}</h3>
+                    <h3><span className="font-medium mr-5">traveltime : </span> {traveltime}</h3>
                 </div>
             </div>
             <div className=" text-end pr-10">

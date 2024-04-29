@@ -14,10 +14,10 @@ const CountriesSection = () => {
             })
     }, [])
     return (
-        <div>
-            <h2 className=" text-5xl font-medium text-center lg:mb-20 lg:mt-36 ">Country Section</h2>
+        <div className="font-algeria mb-5 lg:mb-20">
+            <h2 className="mb-5 lg:mb-20 text-center font-roboto font-extrabold text-2xl lg:text-5xl">Country Section</h2>
 
-            <div className=" grid lg:grid-cols-2 gap-4">
+            <div className=" grid lg:grid-cols-2 gap-4 lg:gap-8">
                 {
                     allcountry.map(country => <CountryCard key={country._id} country={country}></CountryCard>)
                 }

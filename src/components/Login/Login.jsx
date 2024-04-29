@@ -68,7 +68,7 @@ const Login = () => {
     }
 
     return (
-        <div className="mt-4">
+        <div className="mt-4 font-algeria">
             {/* <ToastContainer /> */}
             <Helmet className="text-sm">
                 <title className="">Peaceful Tour | Register</title>
@@ -77,13 +77,13 @@ const Login = () => {
             <form onSubmit={handleLogin} className="card-body mb-6 border rounded-lg border-gray-400 lg:w-1/2 mx-auto">
                 <div className="form-control">
                     <label className="label">
-                        <span className="label-text">Email</span>
+                        <span className="label-text text-2xl font-medium">Email</span>
                     </label>
                     <input type="email" name="email" placeholder="Your Email" className="input input-bordered" required />
                 </div>
                 <div className="form-control">
                     <label className="label">
-                        <span className="label-text">Password</span>
+                        <span className="label-text text-2xl font-medium">Password</span>
                     </label>
                     <div className="mb-4 relative" >
                         <input placeholder="Your Password" className=" w-full py-2 px-4  input input-bordered rounded-lg"
@@ -94,10 +94,10 @@ const Login = () => {
                     </div>
                 </div>
                 <div className="form-control lg:mt-6">
-                    <button className="btn btn-primary">Login</button>
+                    <button className="btn btn-primary text-2xl font-medium">Login</button>
                 </div>
                 <div>
-                    <p>Are You New? Please <Link className="text-blue-500" to="/register">Register</Link></p>
+                    <p className="text-xl">Are You New? Please <Link className="text-blue-500 font-medium" to="/register">Register</Link></p>
                 </div>
                 <div className=" flex justify-center items-center">
                     <div className="flex lg:mt-4 w-4/5">
