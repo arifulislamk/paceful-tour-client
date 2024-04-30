@@ -6,7 +6,7 @@ const Spots = ({ spots }) => {
     return (
         <div className="p-2 bg-base-300 rounded-3xl shadow-xl lg:h-[550px]">
             <figure className="lg:px-10 lg:pt-10  flex justify-center">
-                <img src={image} alt="image" className="rounded-xl lg:h-52 " />
+                <img src={image} alt="image" className="rounded-xl w-[400x] md:h-52 lg:h-52 " />
             </figure>
             <div className=" ">
                 <div className="mt-5 lg:px-10 flex justify-between items-center">

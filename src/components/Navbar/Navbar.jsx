@@ -1,12 +1,11 @@
 import { useContext, useState } from "react";
-import { Helmet } from "react-helmet-async";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../AuthProviders/AuthProviders";
 import { Tooltip } from 'react-tooltip'
 
 const Navbar = () => {
     const { users, logOut } = useContext(AuthContext);
-    const [showdropdown, setShowdropdown] = useState(false) 
+    const [showdropdown, setShowdropdown] = useState(false)
     const links = <>
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="allTouristsSpot">All Tourists Spot</NavLink></li>
@@ -31,9 +30,6 @@ const Navbar = () => {
     }
     return (
         <div className="navbar font-algeria bg-base-100 ">
-            <Helmet className="text-sm">
-                <title className=" ">Peaceful Tour | Navbar</title>
-            </Helmet>
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -45,10 +41,13 @@ const Navbar = () => {
                 </div>
                 <Link to="/"><a data-tooltip-id="my-tooltip"
                     data-tooltip-content="Website Name"
-                    data-tooltip-place="top" className="btn btn-ghost font-roboto font-extrabold text-2xl">Peaceful Tour</a></Link>
+                    data-tooltip-place="top" className=" hidden lg:block btn btn-ghost font-roboto font-extrabold text-xl lg:text-2xl">Peaceful Tour</a></Link>
             </div>
-            <div className="navbar-center hidden lg:flex">
-                <ul className="menu  font-roboto menu-horizontal px-1">
+            <div className="navbar-center lg:flex">
+                <Link to="/"><a data-tooltip-id="my-tooltip"
+                    data-tooltip-content="Website Name"
+                    data-tooltip-place="top" className=" flex justify-center  lg:hidden btn btn-ghost font-roboto font-extrabold text-2xl">Peaceful Tour</a></Link>
+                <ul className="menu  hidden lg:flex font-roboto menu-horizontal px-1">
                     {links}
                 </ul>
             </div>

@@ -40,7 +40,7 @@ const AllTouristsSpot = () => {
         setFilter(e.target.value)
     }
     return (
-        <div className="mt-10 space-y-4 mx-4 lg:mx-12">
+        <div className="lg:mt-10 space-y-4 mx-4 lg:mx-12">
             <Helmet className="text-sm">
                 <title className="">Peaceful Tour | AllTouristsSpot</title>
             </Helmet>
@@ -54,7 +54,7 @@ const AllTouristsSpot = () => {
             </div>
             {loading && <div className=" mt-6 flex justify-center"><span className="loading text-yellow-400 loading-spinner loading-lg"></span></div>}
 
-            <div className=" grid lg:grid-cols-3 justify-center gap-4 items-center">
+            <div className=" grid md:grid-cols-2 lg:grid-cols-3 justify-center gap-2 lg:gap-4 items-center">
                 {
                     allspots.map(spots => <Spots key={spots._id} spots={spots}></Spots>)
                 }

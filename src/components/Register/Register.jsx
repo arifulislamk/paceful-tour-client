@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Swal from 'sweetalert2'
 
 const Register = () => {
-    const { createUser } = useContext(AuthContext);
+    const { createUser, updateUser } = useContext(AuthContext);
     const [showpassword, setshowpassword] = useState(false);
     const navigate = useNavigate();
 
@@ -31,14 +31,15 @@ const Register = () => {
             toast.error('Please Input email')
             return;
         }
-        else if (!password) {
-            toast.error('Please Input password')
-            return;
-        }
         else if (!photo) {
             toast.error('Please Input photo')
             return;
         }
+        else if (!password) {
+            toast.error('Please Input password')
+            return;
+        }
+        
         else if (password.length < 6) {
             toast.error('password must be at least 6 charecter or more charecter!')
             return;
@@ -55,7 +56,13 @@ const Register = () => {
         createUser(email, password)
             .then(res => {
                 console.log(res.user);
-                const user = { email, photo, name }
+                const user = { email, photo, name };
+
+                updateUser(photo, name )
+                    .then(res => {
+                        console.log(res.user)
+                    })
+
                 fetch('https://peaceful-tour-server.vercel.app/user', {
                     method: "POST",
                     headers: {
@@ -113,7 +120,7 @@ const Register = () => {
                 </div>
                 <div className="form-control">
                     <label className="label">
-                        <span className="label-text text-lime-200 font-medium">Password</span>
+                        <span className="label-text text-2xl font-medium">Password</span>
                     </label>
                     <div className="mb-4 relative" >
                         <input placeholder="New Password" className=" w-full py-2 px-4  input input-bordered rounded-lg"

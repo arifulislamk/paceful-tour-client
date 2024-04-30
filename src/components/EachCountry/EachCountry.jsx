@@ -27,8 +27,8 @@ const EachCountry = () => {
     return (
         <div className="bg-base-200 lg:p-10 ">
             {loading && <div className=" mt-6 flex justify-center"><span className="loading text-yellow-400 loading-spinner loading-lg"></span></div>}
-            <h2 className="lg:mb-10 text-3xl font-medium text-center">{filterCountry} Tourists Spots</h2>
-            <div className=" grid lg:grid-cols-3 gap-4">
+            <h2 className="lg:mb-10 text-xl lg:text-3xl font-medium text-center">{filterCountry} Tourists Spots</h2>
+            <div className=" grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {
                     loadedData.map(country => <Spots key={country._id} spots={country}></Spots>)
                 }

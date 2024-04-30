@@ -2,7 +2,7 @@ const VisitorsReview = () => {
     return (
         <div className="text-center font-algeria rounded-lg mb-5 lg:mb-10 mt-5">
             <h2 className="mb-5 lg:mb-20 text-center font-roboto font-extrabold text-2xl lg:text-5xl"> Review From Visitors </h2>
-            <div className=" grid lg:grid-cols-3 gap-2 lg:gap-5">
+            <div className=" grid md:grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-5">
                 <div className="container  bg-base-200 flex flex-col w-full max-w-lg px-3 lg:p-6 mx-auto divide-y rounded-lg dark:divide-gray-300 dark:bg-gray-50 dark:text-gray-800">
                     <div className="flex justify-between p-4">
                         <div className="flex space-x-4">

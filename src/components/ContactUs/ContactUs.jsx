@@ -1,4 +1,9 @@
+import { ToastContainer, toast } from "react-toastify";
+
 const ContactUs = () => {
+    const handleSubmit = () => {
+        toast.success('Submited')
+    }
     return (
         <section className="py-6 font-algeria dark:bg-gray-100 dark:text-gray-900">
             <div className=" space-y-3 grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
@@ -27,7 +32,7 @@ const ContactUs = () => {
                         </p>
                     </div>
                 </div>
-                <form noValidate="" className="flex flex-col py-6 space-y-6 md:py-0 md:px-6">
+                <form onSubmit={handleSubmit}  className="flex flex-col py-6 space-y-6 md:py-0 md:px-6">
                     <label className="block">
                         <span className=" text-2xl font-medium font-algeria">Full name</span>
                         <input type="text" placeholder="Ariful Islam Khan" className="block p-3 border border-gray-200 w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 dark:bg-gray-100" />
@@ -38,11 +43,12 @@ const ContactUs = () => {
                     </label>
                     <label className="block">
                         <span className="mb-1 text-2xl font-medium font-algeria">Message</span>
-                        <textarea rows="3" placeholder="writing here" className="block w-full p-3 border border-gray-200  rounded-md focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 dark:bg-gray-100"></textarea>
+                        <textarea required rows="3" placeholder="writing here" className="block w-full p-3 border border-gray-200  rounded-md focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 dark:bg-gray-100"></textarea>
                     </label>
-                    <button type="button" className="self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ring-opacity-75 dark:bg-violet-600 dark:text-gray-50 focus:dark:ring-violet-600 hover:dark:ring-violet-600">Submit</button>
+                    <input className="px-8 py-3 text-lg btn btn-warning rounded" type="submit" value="Submit" />
                 </form>
             </div>
+            <ToastContainer></ToastContainer>
         </section>
     );
 };
