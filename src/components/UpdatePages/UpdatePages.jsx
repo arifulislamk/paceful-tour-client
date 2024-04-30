@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { useNavigate, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 
@@ -58,7 +59,10 @@ const UpdatePages = () => {
             })
     }
     return (
-        <div>
+        <div className="mt-20">
+            <Helmet className="text-sm">
+                <title className="">Peaceful Tour | Update </title>
+            </Helmet>
             <form onSubmit={handleUpdate} className="font-algeria card-body space-y-2 mb-6 border rounded-lg border-gray-400 lg:w-1/2 mx-auto">
                 <h2 className=" text-2xl lg:text-5xl text-center font-extrabold">Update Your Spot</h2>
                 {loading && <div className=" mt-6 flex justify-center"><span className="loading text-yellow-400 loading-spinner loading-lg"></span></div>}

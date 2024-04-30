@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useLoaderData, useParams } from "react-router-dom";
 
 const SpotDetails = () => {
@@ -12,7 +13,10 @@ const SpotDetails = () => {
     const { username, useremail, spotsname, image, country, location, discription, avaragecost, seasonality, traveltime, totalvisitorsperyear } = spots;
 
     return (
-        <div className="font-algeria space-y-6 mx-4 mt-5 lg:mx-12 ">
+        <div className="font-algeria space-y-6 mx-4 mt-20 lg:mx-12 ">
+            <Helmet className="text-sm">
+                <title className="">Peaceful Tour | {spotsname}</title>
+            </Helmet>
             <div>
                 <img className="w-full lg:h-[500px] rounded-lg" src={image} alt="" />
             </div>

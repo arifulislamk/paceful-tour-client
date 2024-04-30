@@ -93,7 +93,7 @@ const Register = () => {
 
     }
     return (
-        <div className="mt-4 font-algeria">
+        <div className="mt-20 font-algeria">
             {/* <ToastContainer /> */}
             <Helmet className="text-sm">
                 <title className="">Peaceful Tour | Register</title>

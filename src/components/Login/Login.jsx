@@ -72,10 +72,10 @@ const Login = () => {
     }
 
     return (
-        <div className="mt-4 font-algeria">
+        <div className="mt-20 font-algeria">
             {/* <ToastContainer /> */}
             <Helmet className="text-sm">
-                <title className="">Peaceful Tour | Register</title>
+                <title className="">Peaceful Tour | Login</title>
             </Helmet>
             <h2 className="mb-4 text-center font-bold text-5xl">Please Login</h2>
             <form onSubmit={handleLogin} className="card-body mb-6 border rounded-lg border-gray-400 lg:w-1/2 mx-auto">

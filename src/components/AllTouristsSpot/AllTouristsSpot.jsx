@@ -40,7 +40,7 @@ const AllTouristsSpot = () => {
         setFilter(e.target.value)
     }
     return (
-        <div className="lg:mt-10 space-y-4 mx-4 lg:mx-12">
+        <div className="lg:mt-20 space-y-4 mx-4 lg:mx-12">
             <Helmet className="text-sm">
                 <title className="">Peaceful Tour | AllTouristsSpot</title>
             </Helmet>

@@ -18,8 +18,6 @@ import AuthProviders from './AuthProviders/AuthProviders';
 import PraivetRoute from './PraivetRoute/PraivetRoute';
 import SpotDetails from './components/SpotDetails/SpotDetails';
 import ContactUs from './components/ContactUs/ContactUs';
-import Destination from './components/Destination/Destination';
-import VisitorsReview from './components/VisitorsReview/VisitorsReview';
 import UpdatePages from './components/UpdatePages/UpdatePages';
 import EachCountry from './components/EachCountry/EachCountry';
 
@@ -62,14 +60,6 @@ const router = createBrowserRouter([
       {
         path: "contactUs",
         element: <ContactUs />
-      },
-      {
-        path: "destiontion",
-        element: <Destination />
-      },
-      {
-        path: "visitorsReview",
-        element: <VisitorsReview />
       },
       {
         path: "updatePages/:id",

@@ -43,7 +43,7 @@ const AddTouristsSpot = () => {
             })
     }
     return (
-        <div>
+        <div className="lg:mt-20">
             <Helmet className="text-sm">
                 <title className="">Peaceful Tour | AddTouristsSpot</title>
             </Helmet>

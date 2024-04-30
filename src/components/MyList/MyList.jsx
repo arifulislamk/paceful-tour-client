@@ -55,7 +55,7 @@ const MyList = () => {
     }
 
     return (
-        <div className=" mt-5 font-algeria space-y-4 mx-4 lg:mx-12 min-h-screen">
+        <div className="mt-20 font-algeria space-y-4 mx-4 lg:mx-12 min-h-screen">
             <Helmet className="text-sm">
                 <title className="">Peaceful Tour | MyList</title>
             </Helmet>

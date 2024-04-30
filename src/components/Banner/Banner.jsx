@@ -21,7 +21,7 @@ const Banner = () => {
     return (
         <div>
             {/* <!-- slider or curosal  --> */}
-            <div className="font-algeria carousel w-full lg:h-[550px] ">
+            <div className="font-algeria mt-20  rounded-2xl carousel w-full lg:h-[550px] ">
                 {/* <!-- slider 1 --> */}
 
                 <div id="slide1" className="carousel-item relative w-full">

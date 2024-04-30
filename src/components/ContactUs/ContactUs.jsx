@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { ToastContainer, toast } from "react-toastify";
 
 const ContactUs = () => {
@@ -5,7 +6,10 @@ const ContactUs = () => {
         toast.success('Submited')
     }
     return (
-        <section className="py-6 font-algeria dark:bg-gray-100 dark:text-gray-900">
+        <section className="py-6 mt-20 border border-gray-400 font-algeria dark:bg-gray-100 dark:text-gray-900">
+             <Helmet className="text-sm">
+                <title className="">Peaceful Tour | Contact Us</title>
+            </Helmet>
             <div className=" space-y-3 grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
                 <div className="py-6 md:py-0 md:px-6">
                     <h1 className=" text-2xl lg:text-4xl mb-4 lg:mb-6 font-bold ">Contact With Us !</h1>
