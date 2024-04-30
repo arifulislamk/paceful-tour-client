@@ -6,7 +6,7 @@ const Footer = () => {
         <div>
             <footer className="footer font-roboto p-20 bg-base-300 text-base-content">
                 <aside >
-                    <p className=""><span className=" text-2xl lg:text-4xl font-bold">Peaceful Tour</span> <br /> <br />Providing reliable place since 1973</p>
+                    <Link to="/"><p className=""><span className=" text-2xl lg:text-4xl font-bold">Peaceful Tour</span> <br /> <br />Providing reliable place since 1973</p></Link>
                     <div className=" mt-10 mb-5 flex gap-5">
                         <a href="http://facebook.com"><FaFacebook className="w-10 h-10" /></a>
                         <a href="http://instagram.com"><FaInstagram className="w-10 h-10" /></a>

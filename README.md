@@ -29,6 +29,7 @@
 
 
 #  All npm package name
+- react-awesome-reveal :React Awesome Reveal is a library for React apps written in TypeScript that adds reveal animations using the Intersection Observer API to detect when the elements appear in the viewport.
 
 - React-simple-typewriter : A simple react component for adding a nice typewriter effect to your project. NPM · JavaScript Style Guide · npm ..
 

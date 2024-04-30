@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import Spots from "../Spots/Spots";
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
+import { Slide } from "react-awesome-reveal";
 
 const EachCountry = () => {
     const [loading, setLoading] = useState(true)
@@ -30,13 +31,15 @@ const EachCountry = () => {
             <Helmet className="text-sm">
                 <title className="">Peaceful Tour | Country</title>
             </Helmet>
-            {loading && <div className=" mt-6 flex justify-center"><span className="loading text-yellow-400 loading-spinner loading-lg"></span></div>}
-            <h2 className="lg:mb-10 text-xl lg:text-3xl font-medium text-center">{filterCountry} Tourists Spots</h2>
-            <div className=" grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {
-                    loadedData.map(country => <Spots key={country._id} spots={country}></Spots>)
-                }
-            </div>
+            <Slide direction="right" cascade delay={300} triggerOnce>
+                {loading && <div className=" mt-6 flex justify-center"><span className="loading text-yellow-400 loading-spinner loading-lg"></span></div>}
+                <h2 className="lg:mb-10 text-xl lg:text-3xl font-medium text-center">{filterCountry} Tourists Spots</h2>
+                <div className=" grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {
+                        loadedData.map(country => <Spots key={country._id} spots={country}></Spots>)
+                    }
+                </div>
+            </Slide>
         </div>
     );
 };
