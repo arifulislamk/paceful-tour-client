@@ -6,7 +6,11 @@
 * Peaceful Tour
 * Link : https://peaceful-tour.web.app/ 
 
+
+
+
 # Features or Section Describe of my website 
+
 - Home Section : Site Visitors see overview of my website .
 
 - AllTouristsSpot Section : It is the section where is all tourists spots are here . whenever any user added spots it's also added this section. 
@@ -23,7 +27,11 @@
 
 - MyList Section : If user logged in than he see his/her all added spot in a table . table has update and delete btn . when click update he/she can update his/her previous added spot and also can deleted any spot with click X btn. 
 
-#  npm package name
+
+#  All npm package name
+
+- React-simple-typewriter : A simple react component for adding a nice typewriter effect to your project. NPM · JavaScript Style Guide · npm ..
+
 - React ToolTip : React Tooltip is proud to be sponsored by Frigade, a developer tool for building better product onboarding: guided tours, getting started checklists.
 
 - React SweetAleart-2 : SweetAlert2 - a beautiful, responsive, customizable and accessible (WAI-ARIA) replacement for JavaScript's popup boxes.
