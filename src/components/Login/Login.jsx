@@ -98,7 +98,7 @@ const Login = () => {
                     </div>
                 </div>
                 <div className="form-control lg:mt-6">
-                    <button className="btn btn-primary text-2xl font-medium">Login</button>
+                    <button className="btn btn-warning text-2xl font-medium">Login</button>
                 </div>
                 <div>
                     <p className="text-xl">Are You New? Please <Link className="text-blue-500 font-medium" to="/register">Register</Link></p>

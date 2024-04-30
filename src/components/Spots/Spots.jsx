@@ -22,7 +22,7 @@ const Spots = ({ spots }) => {
                 </div>
             </div>
             <div className=" text-end pr-10">
-                <Link to={`/spotDetails/${spots._id}`}><button className="btn btn-primary">View Details</button></Link>
+                <Link to={`/spotDetails/${spots._id}`}><button className="btn btn-warning">View Details</button></Link>
             </div>
         </div>
     );

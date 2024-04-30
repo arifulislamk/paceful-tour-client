@@ -59,7 +59,7 @@ const UpdatePages = () => {
     }
     return (
         <div>
-            <form onSubmit={handleUpdate} className=" font-algeria card-body space-y-2 mb-6 border rounded-lg border-gray-400 lg:w-1/2 mx-auto">
+            <form onSubmit={handleUpdate} className="font-algeria card-body space-y-2 mb-6 border rounded-lg border-gray-400 lg:w-1/2 mx-auto">
                 <h2 className=" text-2xl lg:text-5xl text-center font-extrabold">Update Your Spot</h2>
                 {loading && <div className=" mt-6 flex justify-center"><span className="loading text-yellow-400 loading-spinner loading-lg"></span></div>}
                 <div className="form-control">
@@ -123,7 +123,7 @@ const UpdatePages = () => {
                 </div>
 
                 <div className="form-control mt-6">
-                    <button className="btn btn-primary">Update Now</button>
+                    <button className="btn btn-warning">Update Now</button>
                 </div>
             </form>
         </div>

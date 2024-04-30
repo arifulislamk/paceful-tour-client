@@ -132,7 +132,7 @@ const AddTouristsSpot = () => {
                     <input type="text" defaultValue={users.displayName} name="username" placeholder="User Name" className="input input-bordered" required />
                 </div>
                 <div className="form-control mt-6">
-                    <button className="btn btn-primary">Add Spots</button>
+                    <button className="btn btn-warning">Add Spots</button>
                 </div>
             </form>
             <ToastContainer></ToastContainer>

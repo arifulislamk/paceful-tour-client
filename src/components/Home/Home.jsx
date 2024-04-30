@@ -1,9 +1,10 @@
 import { Helmet } from "react-helmet-async";
-import Carsoul from "../Carsoul/Carsoul";
+// import Carsoul from "../Carsoul/Carsoul";
 import TouristsSpots from "../Tourists Spots/TouristsSpots";
 import CountriesSection from "../CountriesSection/CountriesSection";
 import Destination from "../Destination/Destination";
 import VisitorsReview from "../VisitorsReview/VisitorsReview";
+import Banner from "../Banner/Banner";
 
 const Home = () => {
 
@@ -12,7 +13,8 @@ const Home = () => {
             <Helmet className="text-sm">
                 <title className="">Peaceful Tour | Home</title>
             </Helmet>
-            <Carsoul></Carsoul>
+            <Banner></Banner>
+            {/* <Carsoul></Carsoul> */}
             <TouristsSpots ></TouristsSpots>
             <CountriesSection></CountriesSection>
             <Destination></Destination>
