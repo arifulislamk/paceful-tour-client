@@ -27,7 +27,7 @@ const AddTouristsSpot = () => {
 
         const spots = { username, useremail, spotsname, image, country, location, discription, avaragecost, seasonality, traveltime, totalvisitorsperyear }
 
-        fetch('https://peaceful-tour-server.vercel.app/spot', {
+        fetch(`http://localhost:5000/spot`, {
             method: "POST",
             headers: {
                 "content-type": "application/json"

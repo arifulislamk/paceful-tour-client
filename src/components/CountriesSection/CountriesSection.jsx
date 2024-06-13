@@ -8,7 +8,7 @@ const CountriesSection = () => {
     const [loading, setlLoading] = useState(true)
 
     useEffect(() => {
-        fetch('https://peaceful-tour-server.vercel.app/country')
+        fetch(`${import.meta.env.VITE_API_URL}/country`)
             .then(res => res.json())
             .then(data => {
                 console.log(data)

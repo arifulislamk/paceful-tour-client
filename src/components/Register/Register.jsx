@@ -63,7 +63,7 @@ const Register = () => {
                         console.log(res.user)
                     })
 
-                fetch('https://peaceful-tour-server.vercel.app/user', {
+                fetch(`${import.meta.env.VITE_API_URL}/user`, {
                     method: "POST",
                     headers: {
                         "content-type": "application/json"

@@ -42,7 +42,7 @@ const router = createBrowserRouter([
       {
         path: "allTouristsSpot",
         element: <AllTouristsSpot />,
-        // loader: () => fetch('https://peaceful-tour-server.vercel.app/spot')
+        // loader: () => fetch('http://localhost:5000/spot')
       },
       {
         path: "addTouristsSpot",
@@ -55,7 +55,7 @@ const router = createBrowserRouter([
       {
         path: "/spotDetails/:id",
         element: <PraivetRoute><SpotDetails></SpotDetails></PraivetRoute>,
-        loader: () => fetch('https://peaceful-tour-server.vercel.app/spot')
+        loader: () => fetch(`${import.meta.env.VITE_API_URL}/spot`)
       },
       {
         path: "contactUs",
@@ -64,12 +64,12 @@ const router = createBrowserRouter([
       {
         path: "updatePages/:id",
         element: <UpdatePages />,
-        // loader: ({params}) => fetch(`https://peaceful-tour-server.vercel.app/update/${params.id}`)
+        // loader: ({params}) => fetch(`http://localhost:5000/update/${params.id}`)
       },
       {
         path: "eachCountry/:country",
         element: <EachCountry /> ,
-        // loader: ({params})=> fetch(`https://peaceful-tour-server.vercel.app/country/${params.country}`)
+        // loader: ({params})=> fetch(`http://localhost:5000/country/${params.country}`)
       }
     ],
   },

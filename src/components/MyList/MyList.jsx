@@ -10,7 +10,7 @@ const MyList = () => {
     const [loading, setlLoading] = useState(true)
 
     useEffect(() => {
-        fetch(`https://peaceful-tour-server.vercel.app/myList/${users?.email}`)
+        fetch(`${import.meta.env.VITE_API_URL}/myList/${users?.email}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data)
@@ -32,7 +32,7 @@ const MyList = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://peaceful-tour-server.vercel.app/spot/${id}`, {
+                fetch(`${import.meta.env.VITE_API_URL}/spot/${id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())
@@ -79,8 +79,8 @@ const MyList = () => {
                         <tbody className=" text-xl">
                             {/* row 1 */}
                             {
-                                myList.map((spot,inx) => <tr key={spot._id}>
-                                    <th>{inx+1}</th>
+                                myList.map((spot, inx) => <tr key={spot._id}>
+                                    <th>{inx + 1}</th>
                                     <td>{spot.spotsname}</td>
                                     <td>{spot.location}</td>
                                     <td>{spot.country}</td>

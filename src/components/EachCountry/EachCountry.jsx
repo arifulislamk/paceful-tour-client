@@ -12,7 +12,7 @@ const EachCountry = () => {
     const { country } = useParams();
 
     useEffect(() => {
-        fetch(`https://peaceful-tour-server.vercel.app/country/${country}`)
+        fetch(`${import.meta.env.VITE_API_URL}/country/${country}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data)

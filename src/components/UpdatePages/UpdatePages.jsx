@@ -10,7 +10,7 @@ const UpdatePages = () => {
     const [loadedData, setLoadedData] = useState([])
     const { id } = useParams();
     useEffect(() => {
-        fetch(`https://peaceful-tour-server.vercel.app/update/${id}`)
+        fetch(`${import.meta.env.VITE_API_URL}/update/${id}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data)
@@ -37,7 +37,7 @@ const UpdatePages = () => {
 
         const updateSpots = { spotsname, image, country, location, discription, avaragecost, seasonality, traveltime, totalvisitorsperyear };
 
-        fetch(`https://peaceful-tour-server.vercel.app/update/${_id}`, {
+        fetch(`${import.meta.env.VITE_API_URL}/update/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

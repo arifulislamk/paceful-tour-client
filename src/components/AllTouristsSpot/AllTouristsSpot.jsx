@@ -8,7 +8,7 @@ const AllTouristsSpot = () => {
     // const loadedAllSpots = useLoaderData();
     const [allspots, setAllspots] = useState([]);
     useEffect(() => {
-        fetch('https://peaceful-tour-server.vercel.app/spot')
+        fetch(`${import.meta.env.VITE_API_URL}/spot`)
             .then(res => res.json())
             .then(data => {
                 console.log(data)
@@ -56,13 +56,11 @@ const AllTouristsSpot = () => {
             </div>
             {loading && <div className=" mt-6 flex justify-center"><span className="loading text-yellow-400 loading-spinner loading-lg"></span></div>}
             <Fade cascade duration={100} damping={1.5}>
-                <Slide direction="right" cascade delay={500} triggerOnce>
-                    <div className=" grid md:grid-cols-2 lg:grid-cols-3 justify-center gap-2 lg:gap-4 items-center">
-                        {
-                            allspots.map(spots => <Spots key={spots._id} spots={spots}></Spots>)
-                        }
-                    </div>
-                </Slide>
+                <div className=" grid md:grid-cols-2 lg:grid-cols-3 justify-center gap-2 lg:gap-4 items-center">
+                    {
+                        allspots.map(spots => <Spots key={spots._id} spots={spots}></Spots>)
+                    }
+                </div>
             </Fade>
         </div >
     );
