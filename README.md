@@ -3,7 +3,8 @@
 *  Link : https://peaceful-tour.web.app/ 
 *  Serversite : https://github.com/arifulislamk/paceful-tour-server
 *  Clientsite : https://github.com/arifulislamk/paceful-tour-client
-
+# Overview
+Registered users can add their own travel spots, complete with details, to the all spots section. Users can also edit, update, or delete their added spots, making trip planning easy and personalized.
 # Features website 
 - Home Section : Site Visitors see overview of my website .
 - AllTouristsSpot Section : It is the section where is all tourists spots are here .
