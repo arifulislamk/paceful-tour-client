@@ -27,7 +27,7 @@ const AddTouristsSpot = () => {
 
         const spots = { username, useremail, spotsname, image, country, location, discription, avaragecost, seasonality, traveltime, totalvisitorsperyear }
 
-        fetch(`http://localhost:5000/spot`, {
+        fetch(`${import.meta.env.VITE_API_URL}/spot`, {
             method: "POST",
             headers: {
                 "content-type": "application/json"

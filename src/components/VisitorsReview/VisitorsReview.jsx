@@ -10,7 +10,7 @@ const VisitorsReview = () => {
                         <div className="flex justify-between p-4">
                             <div className="flex space-x-4">
                                 <div>
-                                    <img src="https://i.ibb.co/H47qH3B/joseph-gonzalez-i-Fg-Rcq-Hznqg-unsplash-1.jpg" alt="" className="object-cover w-12 h-12 rounded-full dark:bg-gray-500" />
+                                    <img src="https://i.ibb.co/37tMzq0/rsz-whiteman.jpg" alt="" className="object-cover w-12 h-12 rounded-full dark:bg-gray-500" />
                                 </div>
                                 <div>
                                     <h4 className=" text-2xl font-medium font-algeria">Ariful Khan</h4>
@@ -36,7 +36,7 @@ const VisitorsReview = () => {
                         <div className="flex justify-between p-4">
                             <div className="flex space-x-4">
                                 <div>
-                                    <img src="https://i.ibb.co/58v9msz/michael-dam-m-EZ3-Po-FGs-k-unsplash-1.jpg" alt="" className="object-cover w-12 h-12 rounded-full dark:bg-gray-500" />
+                                    <img src="https://i.ibb.co/L9T29Td/rsz-red-woman.jpg" alt="" className="object-cover w-12 h-12 rounded-full dark:bg-gray-500" />
                                 </div>
                                 <div>
                                     <h4 className="text-2xl font-medium font-algeria">Sunny Henri</h4>
@@ -61,7 +61,7 @@ const VisitorsReview = () => {
                         <div className="flex justify-between p-4">
                             <div className="flex space-x-4">
                                 <div>
-                                    <img src="https://i.ibb.co/98tNKtQ/jake-nackos-IF9-TK5-Uy-KI-unsplash-1.jpg" alt="" className="object-cover w-12 h-12 rounded-full dark:bg-gray-500" />
+                                    <img src="https://i.ibb.co/JvR262z/rsz-21white-woman.jpg" alt="" className="object-cover w-12 h-12 rounded-full dark:bg-gray-500" />
                                 </div>
                                 <div>
                                     <h4 className="text-2xl font-medium font-algeria">Miyal Jeny</h4>

@@ -1,7 +1,7 @@
 import Spots from "../Spots/Spots";
 import { Helmet } from "react-helmet-async";
 import { useEffect, useState } from "react";
-import { Fade, Slide } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 
 const AllTouristsSpot = () => {
     const [loading, setlLoading] = useState(true);

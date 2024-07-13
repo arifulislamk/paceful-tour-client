@@ -105,8 +105,8 @@ const Login = () => {
                 </div>
                 <div className=" flex justify-center items-center">
                     <div className="flex lg:mt-4 w-4/5">
-                        <div className="w-1/2"><button onClick={handleGoogleLogin} className=" w-2/5"><img src="https://i.ibb.co/vJN54YQ/Google-2015-logo-svg.png" alt="google image" /></button></div>
-                        <div className="w-1/2"><button onClick={handleGithubLogin} className=" w-2/5"><img src="https://i.ibb.co/nrsgX6d/images.png" alt="githubimage" /></button></div>
+                        <div className="w-1/2"><button onClick={handleGoogleLogin} className=" w-2/5"><img src="https://i.ibb.co/yVgVyZk/rsz-1rsz-1google.png" alt="google image" /></button></div>
+                        <div className="w-1/2"><button onClick={handleGithubLogin} className=" w-2/5"><img src="https://i.ibb.co/ZWSjN1Q/rsz-github.jpg" alt="githubimage" /></button></div>
                     </div>
                 </div>
             </form>
