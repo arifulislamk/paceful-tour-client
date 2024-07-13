@@ -51,7 +51,7 @@ const Banner = () => {
                 </Slide>
               </Link>
             </div>
-            <div className=" ">
+            <div className=" md:w-[500px] ">
               <Slide direction="right" cascade delay={100} triggerOnce>
                 <img
                   src="https://i.ibb.co/TT9gtLD/rsz-coxbazer.jpg"
@@ -70,27 +70,32 @@ const Banner = () => {
           </div>
         </div>
 
-        {/* <!-- slider 2  --> */}
+        {/* <!-- slider 2 --> */}
         <div id="slide2" className="carousel-item relative w-full">
-          <div className="flex flex-col lg:flex-row p-3 lg:p-24 gap-5 lg:gap-20">
-            <div className="space-y-7 h-36 md:h-96 ">
-              <h2 className="text-xl text-secondary h-24 md:24 lg:h-36 lg:text-4xl font-bold">
+
+          <div className="flex flex-col lg:flex-row p-3 lg:p-24 gap-20">
+            <div className="space-y-7 md:w-[650px] h-36 md:h-96 justify-between">
+              <h2 className=" text-xl text-secondary h-24 md:24 lg:h-36 lg:text-4xl font-bold">
                 {text1}
               </h2>
               <p className=" text-2xl lg:text-4xl font-medium text-error ">
-                Bangkok , Thailand
+              Bangkok , Thailand
               </p>
-              <Link className=" text-center " to="/spotDetails/663089bd401b9d9fc60534eb">
-                <button className="btn btn-xs md:btn-md mt-4 lg:mt-10 btn-warning text-white">
-                  View Details
-                </button>
+              <Link className=" text-center md:text-left" to="/spotDetails/663089bd401b9d9fc60534eb">
+                <Slide triggerOnce>
+                  <button className="btn btn-xs md:btn-md mt-4 lg:mt-10 btn-warning text-white">
+                    View Details
+                  </button>
+                </Slide>
               </Link>
             </div>
-            <div className="">
-              <img
-                src="https://i.ibb.co/2yxDrWZ/rsz-bangkok.jpg"
-                className=" w-1/2 rounded-2xl"
-              />
+            <div className=" md:w-[500px]">
+              <Slide direction="right" cascade delay={100} triggerOnce>
+                <img
+                  src="https://i.ibb.co/2yxDrWZ/rsz-bangkok.jpg"
+                  className="w-full rounded-2xl"
+                />
+              </Slide>
             </div>
           </div>
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -105,7 +110,7 @@ const Banner = () => {
         {/* <!-- slider 3 --> */}
         <div id="slide3" className="carousel-item relative w-full">
           <div className="flex flex-col lg:flex-row p-4 lg:p-24 gap5 lg:gap-20">
-            <div className="space-y-7 flex-1">
+            <div className="space-y-7 md:w-[650px] h-36 md:h-96">
               <h2 className="text-xl text-secondary h-24 md:24 lg:h-36 lg:text-4xl font-bold">
                 {text2}
               </h2>
@@ -118,7 +123,7 @@ const Banner = () => {
                 </button>
               </Link>
             </div>
-            <div className="flex-1">
+            <div className="md:w-[500px]">
               <img
                 src="https://i.ibb.co/Hrk5Wv6/rsz-bali.jpg"
                 className="w-full rounded-2xl"
@@ -138,7 +143,7 @@ const Banner = () => {
         {/* <!-- slider 4 --> */}
         <div id="slide4" className="carousel-item relative w-full">
           <div className="flex flex-col lg:flex-row p-4 lg:p-24 gap-5 lg:gap-20">
-            <div className="space-y-7 flex-1">
+            <div className="space-y-7 md:w-[650px] h-36 md:h-96">
               <h2 className="text-xl text-secondary h-24 md:24 lg:h-36 lg:text-4xl font-bold">
                 {text3}
               </h2>
@@ -151,7 +156,7 @@ const Banner = () => {
                 </button>
               </Link>
             </div>
-            <div className="flex-1">
+            <div className="md:w-[500px]">
               <img
                 src="https://i.ibb.co/qgtdSVy/rsz-kulalumpur.jpg"
                 className="w-full"
