@@ -12,7 +12,7 @@ const Footer = () => {
                         <a href="http://instagram.com"><FaInstagram className="w-10 h-10" /></a>
                         <a href="http://google.com"><FaGoogle className="w-10 h-10" /></a>
                     </div>
-                    <p className=" texl-2xl font-semibold">Copyright © 2024 - All right reserved By Ariful Islam Khan</p>
+                    <p className=" hidden md:block texl-2xl font-semibold">Copyright © 2024 - All right reserved By Ariful Islam Khan</p>
 
                 </aside>
                 <nav>
@@ -24,6 +24,7 @@ const Footer = () => {
                     <h6 className="footer-title">Company</h6>
                     <a className="link link-hover">About us</a>
                     <Link to="contactUs"><a className="link link-hover">Contact Us</a></Link>
+                    <p className=" md:hidden mt-6 texl-2xl font-semibold">Copyright © 2024 - All right reserved By Ariful Islam Khan</p>
                 </nav>
             </footer>
         </div>
